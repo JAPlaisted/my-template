@@ -3,26 +3,58 @@ import '../../../styles/components/typography.scss';
 export default function KitchenSink() {
   return (
     <main className="p-8">
-      <h1 className="heading--xl">Kitchen Sink</h1>
+      <div className="container">
+        <h1 className="heading--xl mb-6">Kitchen Sink</h1>
 
-      <h2 className="heading">Typography</h2>
-      <section className="space-y-4">
-        <div className="heading--s">.heading--s</div>
-        <div className="heading">.heading</div>
-        <div className="heading--l">.heading--l</div>
+        <hr className="mb-6" />
+        <h2 className="heading mb-6">Typography</h2>
+        <section className="mb-6">
 
-        <div className="subheading--s">.subheading--s</div>
-        <div className="subheading">.subheading</div>
-        <div className="subheading--l">.subheading--l</div>
+            <div className="heading--s mb-2">.heading--s</div>
+            <div className="heading mb-2">.heading</div>
+            <div className="heading--l mb-2">.heading--l</div>
+            <div className="heading--xl mb-2">.heading--xl</div>
 
-        <div className="eyebrow">.eyebrow</div>
+            <div className="subheading--s mb-2">.subheading--s</div>
+            <div className="subheading mb-2">.subheading</div>
+            <div className="subheading--l mb-2">.subheading--l</div>
 
-        <div className="body--xs">.body--xs</div>
-        <div className="body--s">.body--s</div>
-        <div className="body">.body</div>
-        <div className="body--l">.body--l</div>
-        <div className="body--xl">.body--xl</div>
-      </section>
+            <div className="eyebrow mb-2">.eyebrow</div>
+
+            <div className="body--xs mb-2">.body--xs</div>
+            <div className="body--s mb-2">.body--s</div>
+            <div className="body mb-2">.body</div>
+            <div className="body--l mb-2">.body--l</div>
+            <div className="body--xl mb-2">.body--xl</div>
+
+        </section>
+
+        <hr className="mb-6" />
+        <h2 className="heading mb-6">Layout</h2>
+        <section className="space-y-4">
+            <div className="box">
+                <div className="eyebrow">Typography Sample</div>
+                <div className="heading">Inside a Box</div>
+                <div className="body mt-2">This content is wrapped in a <code>.box</code> inside a <code>.container</code>.</div>
+            </div>
+
+            <div className="row mt-8">
+                <div className="col">
+                    <div className="box">
+                        <div className="subheading--s">Left Column</div>
+                        <div className="body">This is a 50% column on desktop, 100% on mobile.</div>
+                    </div>
+                </div>
+
+                <div className="col">
+                    <div className="box">
+                        <div className="subheading--s">Right Column</div>
+                        <div className="body">You can nest any components inside these columns.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+      </div>
     </main>
   );
 }

@@ -7,7 +7,7 @@ export default function KitchenSink() {
         <h1 className="heading--xl mb-6">Kitchen Sink</h1>
 
         <hr className="mb-6" />
-        <h2 className="heading mb-6">Typography</h2>
+        <h2 className="heading--l mb-6">Typography</h2>
         <section className="mb-6">
 
             <div className="heading--s mb-2">.heading--s</div>
@@ -30,7 +30,7 @@ export default function KitchenSink() {
         </section>
 
         <hr className="mb-6" />
-        <h2 className="heading mb-6">Layout</h2>
+        <h2 className="heading--l mb-6">Layout</h2>
         <section className="mb-6">
             <div className="box">
                 <div className="eyebrow">Typography Sample</div>
@@ -56,44 +56,44 @@ export default function KitchenSink() {
         </section>
 
         <hr className="mb-6" />
-        <h2 className="heading mb-4">Color Palette</h2>
+        <h2 className="heading--l mb-4">Color Palette</h2>
         <section className="mb-6">
           <div className="row">
             <div className="col">
               <div className="box bg-primary text-white">
-                <div className="subheading--s">.bg-primary</div>
+                <div className="subheading">.bg-primary</div>
                 <div className="body">.text-white</div>
               </div>
             </div>
             <div className="col">
+              <div className="box bg-white text-primary">
+                <div className="subheading">.bg-white</div>
+                <div className="body">.text-primary</div>
+              </div>
+            </div>
+            <div className="col">
               <div className="box bg-secondary text-accent">
-                <div className="subheading--s">.bg-secondary</div>
+                <div className="subheading">.bg-secondary</div>
                 <div className="body">.text-accent</div>
               </div>
             </div>
             <div className="col">
-              <div className="box bg-dark text-light">
-                <div className="subheading--s">.bg-dark</div>
-                <div className="body">.text-light</div>
+              <div className="box bg-accent text-secondary">
+                <div className="subheading">.bg-accent</div>
+                <div className="body">.text-secondary</div>
               </div>
             </div>
           </div>
           <div className="row mt-4">
             <div className="col">
-              <div className="box bg-white text-primary">
-                <div className="subheading--s">.bg-white</div>
-                <div className="body">.text-primary</div>
-              </div>
-            </div>
-            <div className="col">
-              <div className="box bg-accent text-secondary">
-                <div className="subheading--s">.bg-accent</div>
-                <div className="body">.text-secondary</div>
+              <div className="box bg-dark text-light">
+                <div className="subheading">.bg-dark</div>
+                <div className="body">.text-light</div>
               </div>
             </div>
             <div className="col">
               <div className="box bg-light text-dark">
-                <div className="subheading--s">.bg-light</div>
+                <div className="subheading">.bg-light</div>
                 <div className="body">.text-dark</div>
               </div>
             </div>

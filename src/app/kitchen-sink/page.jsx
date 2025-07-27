@@ -1,4 +1,6 @@
 import '../../../styles/components/typography.scss';
+import '../../../styles/pages/kitchen-sink.scss';
+
 
 export default function KitchenSink() {
   return (
@@ -61,25 +63,25 @@ export default function KitchenSink() {
           <div className="row">
             <div className="col">
               <div className="box bg-primary text-white">
-                <div className="subheading">.bg-primary</div>
+                <div className="heading--s">.bg-primary</div>
                 <div className="body">.text-white</div>
               </div>
             </div>
             <div className="col">
               <div className="box bg-white text-primary">
-                <div className="subheading">.bg-white</div>
+                <div className="heading--s">.bg-white</div>
                 <div className="body">.text-primary</div>
               </div>
             </div>
             <div className="col">
               <div className="box bg-secondary text-accent">
-                <div className="subheading">.bg-secondary</div>
+                <div className="heading--s">.bg-secondary</div>
                 <div className="body">.text-accent</div>
               </div>
             </div>
             <div className="col">
               <div className="box bg-accent text-secondary">
-                <div className="subheading">.bg-accent</div>
+                <div className="heading--s">.bg-accent</div>
                 <div className="body">.text-secondary</div>
               </div>
             </div>
@@ -87,18 +89,32 @@ export default function KitchenSink() {
           <div className="row mt-4">
             <div className="col">
               <div className="box bg-dark text-light">
-                <div className="subheading">.bg-dark</div>
+                <div className="heading--s">.bg-dark</div>
                 <div className="body">.text-light</div>
               </div>
             </div>
             <div className="col">
               <div className="box bg-light text-dark">
-                <div className="subheading">.bg-light</div>
+                <div className="heading--s">.bg-light</div>
                 <div className="body">.text-dark</div>
               </div>
             </div>
           </div>
         </section>
+
+        <section className="container mb-12">
+            <h2 className="heading mb-4">Responsive Mixins</h2>
+            <div className="responsive-box">
+                <div className="body">
+                    Resize your browser to see this box change color.
+                </div>
+                <div className="body--s mt-2">
+                    <strong>{"@include mobile {"}</strong> background-color: $white; border-color: $tropicalIndigo;<strong>{"}"}</strong><br />
+                    <strong>{"@include desktop {"}</strong> background-color: $honeydew; border-color: $oxfordBlue;<strong>{"}"}</strong><br />
+                </div>
+            </div>
+        </section>
+
       </div>
     </main>
   );

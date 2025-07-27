@@ -4,16 +4,12 @@
   padding-left: 1rem;
   padding-right: 1rem;
 
-  @media (min-width: 768px) {
+  @include desktop {
     max-width: 720px;
   }
 
-  @media (min-width: 1024px) {
+  @include desktop {
     max-width: 960px;
-  }
-
-  @media (min-width: 1280px) {
-    max-width: 1140px;
   }
 }
 
@@ -28,7 +24,7 @@
   padding: 1rem;
   width: 100%;
 
-  @media (min-width: 768px) {
+  @include desktop {
     width: 50%;
   }
 }

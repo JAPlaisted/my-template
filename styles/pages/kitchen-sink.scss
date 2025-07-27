@@ -1,0 +1,21 @@
+@import '../variables';
+@import '../mixins';
+
+// Using mixins for responsive design
+.responsive-box {
+  background-color: $honeydew;
+  padding: 1.5rem;
+  text-align: center;
+  border: 2px dashed $oxfordBlue;
+  margin-bottom: 2rem;
+
+  @include mobile {
+    background-color: $white;
+    border-color: $tropicalIndigo;
+  }
+
+  @include desktop {
+    background-color: $honeydew;
+    border-color: $oxfordBlue;
+  }
+}

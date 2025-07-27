@@ -31,7 +31,7 @@ export default function KitchenSink() {
 
         <hr className="mb-6" />
         <h2 className="heading mb-6">Layout</h2>
-        <section className="space-y-4">
+        <section className="mb-6">
             <div className="box">
                 <div className="eyebrow">Typography Sample</div>
                 <div className="heading">Inside a Box</div>
@@ -53,6 +53,51 @@ export default function KitchenSink() {
                     </div>
                 </div>
             </div>
+        </section>
+
+        <hr className="mb-6" />
+        <h2 className="heading mb-4">Color Palette</h2>
+        <section className="mb-6">
+          <div className="row">
+            <div className="col">
+              <div className="box bg-primary text-white">
+                <div className="subheading--s">.bg-primary</div>
+                <div className="body">.text-white</div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="box bg-secondary text-accent">
+                <div className="subheading--s">.bg-secondary</div>
+                <div className="body">.text-accent</div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="box bg-dark text-light">
+                <div className="subheading--s">.bg-dark</div>
+                <div className="body">.text-light</div>
+              </div>
+            </div>
+          </div>
+          <div className="row mt-4">
+            <div className="col">
+              <div className="box bg-white text-primary">
+                <div className="subheading--s">.bg-white</div>
+                <div className="body">.text-primary</div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="box bg-accent text-secondary">
+                <div className="subheading--s">.bg-accent</div>
+                <div className="body">.text-secondary</div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="box bg-light text-dark">
+                <div className="subheading--s">.bg-light</div>
+                <div className="body">.text-dark</div>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </main>

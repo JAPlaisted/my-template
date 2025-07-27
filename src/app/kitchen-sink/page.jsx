@@ -102,8 +102,9 @@ export default function KitchenSink() {
           </div>
         </section>
 
+        <hr className="mb-6" />
+        <h2 className="heading mb-4">Responsive Mixins</h2>
         <section className="container mb-12">
-            <h2 className="heading mb-4">Responsive Mixins</h2>
             <div className="responsive-box">
                 <div className="body">
                     Resize your browser to see this box change color.
@@ -115,6 +116,26 @@ export default function KitchenSink() {
             </div>
         </section>
 
+        <hr className="mb-6" />
+        <h2 className="heading mb-4">Buttons</h2>
+        <section className="container mb-12">
+            <div className="row">
+                <div className="col">
+                    <div className="eyebrow mb-2">Primary Buttons</div>
+                    <button className="button btn--s btn-primary">Small</button>{' '}
+                    <button className="button btn btn-primary">Default</button>{' '}
+                    <button className="button btn--l btn-primary">Large</button>
+                </div>
+                <div className="col">
+                    <div className="eyebrow mb-2">Secondary Buttons</div>
+                    <button className="button btn--s btn-secondary">Small</button>{' '}
+                    <button className="button btn btn-secondary">Default</button>{' '}
+                    <button className="button btn--l btn-secondary">Large</button>
+                </div>
+            </div>
+        </section>
+
+        <hr className="mb-6" />
       </div>
     </main>
   );

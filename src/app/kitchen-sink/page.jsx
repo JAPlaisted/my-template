@@ -12,22 +12,39 @@ export default function KitchenSink() {
         <h2 className="heading--l mb-6">Typography</h2>
         <section className="mb-6">
 
-            <div className="heading--s mb-2">.heading--s</div>
-            <div className="heading mb-2">.heading</div>
-            <div className="heading--l mb-2">.heading--l</div>
-            <div className="heading--xl mb-2">.heading--xl</div>
+            <div className="heading--s mb-4">.heading--s</div>
 
-            <div className="subheading--s mb-2">.subheading--s</div>
-            <div className="subheading mb-2">.subheading</div>
-            <div className="subheading--l mb-2">.subheading--l</div>
+            <div className="heading mb-4">.heading</div>
 
-            <div className="eyebrow mb-2">.eyebrow</div>
+            <div className="heading--l mb-4">.heading--l</div>
+
+            <div className="heading--xl mb-4">.heading--xl</div>
+
+            <div className="subheading--s mb-4">.subheading--s</div>
+
+            <div className="subheading mb-4">.subheading</div>
+
+            <div className="subheading--l mb-4">.subheading--l</div>
+
+            <div className="eyebrow mb-4">.eyebrow</div>
 
             <div className="body--xs mb-2">.body--xs</div>
+            <div className="body--xs mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore sequi odio assumenda laboriosam dolorum explicabo perferendis minima suscipit atque. Quae laboriosam sit quis deserunt dolore ex vel cum. Saepe placeat numquam dolorum adipisci? Quas quos tempore ipsum et quod porro nesciunt eius cumque delectus? Quam.</div>
+
             <div className="body--s mb-2">.body--s</div>
+            <div className="body--s mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore sequi odio assumenda laboriosam dolorum explicabo perferendis minima suscipit atque. Quae laboriosam sit quis deserunt dolore ex vel cum. Saepe placeat numquam dolorum adipisci? Quas quos tempore ipsum et quod porro nesciunt eius cumque delectus? Quam.</div>
+
             <div className="body mb-2">.body</div>
+            <div className="body mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore sequi odio assumenda laboriosam dolorum explicabo perferendis minima suscipit atque. Quae laboriosam sit quis deserunt dolore ex vel cum. Saepe placeat numquam dolorum adipisci? Quas quos tempore ipsum et quod porro nesciunt eius cumque delectus? Quam.</div>
+
             <div className="body--l mb-2">.body--l</div>
+            <div className="body--l mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore sequi odio assumenda laboriosam dolorum explicabo perferendis minima suscipit atque. Quae laboriosam sit quis deserunt dolore ex vel cum. Saepe placeat numquam dolorum adipisci? Quas quos tempore ipsum et quod porro nesciunt eius cumque delectus? Quam.</div>
+
             <div className="body--xl mb-2">.body--xl</div>
+            <div className="body--xl mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore sequi odio assumenda laboriosam dolorum explicabo perferendis minima suscipit atque. Quae laboriosam sit quis deserunt dolore ex vel cum. Saepe placeat numquam dolorum adipisci? Quas quos tempore ipsum et quod porro nesciunt eius cumque delectus? Quam.</div>
+
+            <a className="mb-2" href='/'>links</a>
+            <div className="body mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore sequi odio assumenda laboriosam dolorum explicabo perferendis minima suscipit atque. <a href='/'>Quae laboriosam</a> sit quis deserunt dolore ex vel cum. Saepe placeat numquam dolorum adipisci? Quas quos tempore ipsum et quod porro nesciunt eius cumque delectus? Quam.</div>
 
         </section>
 

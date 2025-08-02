@@ -15,8 +15,8 @@ html, body {
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+  text-decoration: underline 1px solid $coquelicot;
+  color: $coquelicot;
 }
 
 * {

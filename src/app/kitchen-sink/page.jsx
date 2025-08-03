@@ -1,6 +1,6 @@
-import '../../../styles/components/typography.scss';
 import '../../../styles/pages/kitchen-sink.scss';
-import MediaBlock from './../components/media-block';
+import MediaBlock from '../components/mediaBlock';
+import VideoBlock from '../components/videoBlock';
 
 const mediaBlockData = {
     imageUrl: 'https://picsum.photos/1200',
@@ -21,7 +21,7 @@ const mediaBlockData2 = {
     imageUrl: 'https://picsum.photos/600',
     eyebrow: 'Media Block',
     heading: 'This is a reversed media block',
-    body: 'I have the image on the right and text on the left using {isReversed: true}. I also have two buttons.',
+    body: 'I have the image on the right and text on the left using "isReversed: true". I also have two buttons.',
     isReversed: true,
     buttons: [
       {
@@ -36,6 +36,19 @@ const mediaBlockData2 = {
       },
     ],
 };
+
+export const videoBlockData = {
+  youTubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+  thumbnailUrl: '',
+  playIconUrl: '', 
+};
+
+export const videoBlockData2 = {
+  youTubeUrl: 'https://youtu.be/dQw4w9WgXcQ',
+  thumbnailUrl: 'https://picsum.photos/1200',
+  playIconUrl: '',
+};
+
 
 export default function KitchenSink() {
   return (
@@ -208,6 +221,15 @@ export default function KitchenSink() {
         <section className="mb-12">
           <MediaBlock {...mediaBlockData} />
           <MediaBlock {...mediaBlockData2} />
+        </section>
+
+        <hr className="mb-6" />
+        <h2 className="heading mb-4">Video Block</h2>
+        <section className="mb-12">
+          <div className="body mb-4">This is a video Block. It plays a YouTube video in an iframe. It uses the thumbnail provided by youtube.</div>
+          <VideoBlock {...videoBlockData} />
+          <div className="body mt-8 mb-4 ">This is a video Block. It plays a YouTube video in an iframe. It uses a custom thumbnail.</div>
+          <VideoBlock {...videoBlockData2} />
         </section>
       </div>
     </main>

@@ -23,3 +23,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.body, .body--xs .body--s, .body--l, .body--xl {
+  text-wrap: balance;
+}

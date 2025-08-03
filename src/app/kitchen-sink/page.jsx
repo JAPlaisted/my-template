@@ -38,13 +38,13 @@ const mediaBlockData2 = {
 };
 
 export const videoBlockData = {
-  youTubeUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+  youTubeUrl: 'https://www.youtube.com/watch?v=nVNIoQUcFI4',
   thumbnailUrl: '',
   playIconUrl: '', 
 };
 
 export const videoBlockData2 = {
-  youTubeUrl: 'https://youtu.be/dQw4w9WgXcQ',
+  youTubeUrl: 'https://www.youtube.com/watch?v=nVNIoQUcFI4',
   thumbnailUrl: 'https://picsum.photos/1200',
   playIconUrl: '',
 };
@@ -53,7 +53,7 @@ export const videoBlockData2 = {
 export default function KitchenSink() {
   return (
     <main className="p-8">
-      <div className="container">
+      <div className="container kitchen-sink">
         <h1 className="heading--xl mb-6">Kitchen Sink</h1>
 
         <hr className="mb-6" />
@@ -98,34 +98,8 @@ export default function KitchenSink() {
         </section>
 
         <hr className="mb-6" />
-        <h2 className="heading--l mb-6">Layout</h2>
-        <section className="mb-6">
-            <div className="box">
-                <div className="eyebrow">Typography Sample</div>
-                <div className="heading">Inside a Box</div>
-                <div className="body mt-2">This content is wrapped in a <code>.box</code> inside a <code>.container</code>.</div>
-            </div>
-
-            <div className="row mt-8">
-                <div className="col">
-                    <div className="box">
-                        <div className="subheading--s">Left Column</div>
-                        <div className="body">This is a 50% column on desktop, 100% on mobile.</div>
-                    </div>
-                </div>
-
-                <div className="col">
-                    <div className="box">
-                        <div className="subheading--s">Right Column</div>
-                        <div className="body">You can nest any components inside these columns.</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <hr className="mb-6" />
         <h2 className="heading--l mb-4">Color Palette</h2>
-        <section className="mb-6">
+        <section className="mb-6 color-palette">
           <div className="row">
             <div className="col">
               <div className="box bg-primary text-white">
@@ -216,6 +190,36 @@ export default function KitchenSink() {
         </section>
 
         <hr className="mb-6" />
+        <h2 className="heading--l mb-6">Layout</h2>
+        <section className="mb-6 kitchen-layout">
+            <div className="box">
+                <div className="eyebrow">Layout Sample</div>
+                <div className="heading">Using Layout Classes</div>
+                <div className="body mt-2">This content is wrapped in a <code>.box</code> and the below content uses the <code>.row</code> and <code>.col</code> classes as well as <code>.box</code> as the inner most container.</div>
+                <div className="body--s mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus tenetur officia exercitationem nisi ea voluptates, ut praesentium magni reiciendis qui! Maiores eligendi error quos porro dolore veritatis quo, quod officia?</div>
+                <div className="body--s mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus tenetur officia exercitationem nisi ea voluptates, ut praesentium magni reiciendis qui! Maiores eligendi error quos porro dolore veritatis quo, quod officia? Doloribus tenetur officia exercitationem nisi ea voluptates, ut praesentium magni reiciendis qui! Maiores eligendi error quos porro dolore veritatis quo, quod officia?</div>
+            </div>
+
+            <div className="row">
+                <div className="col">
+                    <div className="box">
+                        <div className="subheading--s mb-2">Left Column</div>
+                        <div className="body mb-2">This is a 50% column on desktop, 100% on mobile.</div>
+                        <button className="button btn--s btn-primary">Small</button>
+                    </div>
+                </div>
+
+                <div className="col">
+                    <div className="box">
+                        <div className="subheading--s mb-2">Right Column</div>
+                        <div className="body mb-2">You can nest any components inside these columns.</div>
+                        <button className="button btn--s btn-primary--outline">Small</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr className="mb-6" />
         <h3 className="eyebrow mb-4 text-primary">Components</h3>
         <h2 className="heading mb-4">Media Block</h2>
         <section className="mb-12">
@@ -226,10 +230,16 @@ export default function KitchenSink() {
         <hr className="mb-6" />
         <h2 className="heading mb-4">Video Block</h2>
         <section className="mb-12">
-          <div className="body mb-4">This is a video Block. It plays a YouTube video in an iframe. It uses the thumbnail provided by youtube.</div>
+          <div className="body mb-4">This is a video block. It plays a YouTube video in an iframe. It uses the thumbnail provided by youtube.</div>
           <VideoBlock {...videoBlockData} />
-          <div className="body mt-8 mb-4 ">This is a video Block. It plays a YouTube video in an iframe. It uses a custom thumbnail.</div>
+          <div className="body mt-8 mb-4 ">This is a video block. It plays a YouTube video in an iframe. It uses a custom thumbnail.</div>
           <VideoBlock {...videoBlockData2} />
+        </section>
+
+        <hr className="mb-6" />
+        <h2 className="heading mb-4">Waypoint</h2>
+        <section className="mb-12">
+          {/* Waypoint */}
         </section>
       </div>
     </main>

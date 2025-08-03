@@ -1,6 +1,41 @@
 import '../../../styles/components/typography.scss';
 import '../../../styles/pages/kitchen-sink.scss';
+import MediaBlock from './../components/media-block';
 
+const mediaBlockData = {
+    imageUrl: 'https://picsum.photos/1200',
+    eyebrow: 'Media Block',
+    heading: 'This is a media block',
+    body: 'I have an image on the left and text on the right. I also have one button.',
+    isReversed: false,
+    buttons: [
+      {
+        label: 'Lorem ipsum',
+        link: '/',
+        theme: 'btn-primary',
+      },
+    ],
+};
+
+const mediaBlockData2 = {
+    imageUrl: 'https://picsum.photos/600',
+    eyebrow: 'Media Block',
+    heading: 'This is a reversed media block',
+    body: 'I have the image on the right and text on the left using {isReversed: true}. I also have two buttons.',
+    isReversed: true,
+    buttons: [
+      {
+        label: 'Lorem ipsum',
+        link: '/',
+        theme: 'btn-primary',
+      },
+      {
+        label: 'Lorem ipsum',
+        link: '/',
+        theme: 'btn-secondary--outline',
+      },
+    ],
+};
 
 export default function KitchenSink() {
   return (
@@ -9,6 +44,7 @@ export default function KitchenSink() {
         <h1 className="heading--xl mb-6">Kitchen Sink</h1>
 
         <hr className="mb-6" />
+        <h3 className="eyebrow mb-4 text-primary">Elements</h3>
         <h2 className="heading--l mb-6">Typography</h2>
         <section className="mb-6">
 
@@ -121,7 +157,7 @@ export default function KitchenSink() {
 
         <hr className="mb-6" />
         <h2 className="heading mb-4">Responsive Mixins</h2>
-        <section className="container mb-12">
+        <section className="mb-12">
             <div className="responsive-box">
                 <div className="body">
                     Resize your browser to see this box change color.
@@ -135,24 +171,44 @@ export default function KitchenSink() {
 
         <hr className="mb-6" />
         <h2 className="heading mb-4">Buttons</h2>
-        <section className="container mb-12">
+        <section className="mb-12">
             <div className="row">
                 <div className="col">
-                    <div className="eyebrow mb-2">Primary Buttons</div>
+                    <div className="body--s mb-2">.btn-primary</div>
                     <button className="button btn--s btn-primary">Small</button>{' '}
                     <button className="button btn btn-primary">Default</button>{' '}
                     <button className="button btn--l btn-primary">Large</button>
                 </div>
                 <div className="col">
-                    <div className="eyebrow mb-2">Secondary Buttons</div>
+                    <div className="body--s mb-2">.btn-secondary</div>
                     <button className="button btn--s btn-secondary">Small</button>{' '}
                     <button className="button btn btn-secondary">Default</button>{' '}
                     <button className="button btn--l btn-secondary">Large</button>
                 </div>
             </div>
+            <div className="row">
+                <div className="col">
+                    <div className="body--s mb-2">.btn-primary--outline</div>
+                    <button className="button btn--s btn-primary--outline">Small</button>{' '}
+                    <button className="button btn btn-primary--outline">Default</button>{' '}
+                    <button className="button btn--l btn-primary--outline">Large</button>
+                </div>
+                <div className="col">
+                    <div className="body--s mb-2">.btn-secondary--outline</div>
+                    <button className="button btn--s btn-secondary--outline">Small</button>{' '}
+                    <button className="button btn btn-secondary--outline">Default</button>{' '}
+                    <button className="button btn--l btn-secondary--outline">Large</button>
+                </div>
+            </div>
         </section>
 
         <hr className="mb-6" />
+        <h3 className="eyebrow mb-4 text-primary">Components</h3>
+        <h2 className="heading mb-4">Media Block</h2>
+        <section className="mb-12">
+          <MediaBlock {...mediaBlockData} />
+          <MediaBlock {...mediaBlockData2} />
+        </section>
       </div>
     </main>
   );

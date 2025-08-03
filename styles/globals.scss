@@ -1,10 +1,10 @@
 @import './variables';
 @import './mixins';
 @import './components/typography';
-@import './components/typography';
 @import './components/layout';
 @import './components/colors';
 @import './components/button';
+@import './components/mediaBlock';
 
 html, body {
   font-family: 'Inter', sans-serif;

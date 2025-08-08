@@ -1,6 +1,9 @@
+'use client';
+
 import '../../../styles/pages/kitchen-sink.scss';
 import MediaBlock from '../components/mediaBlock';
 import VideoBlock from '../components/videoBlock';
+import Waypoint from '../components/waypoint';
 
 const mediaBlockData = {
     imageUrl: 'https://picsum.photos/1200',
@@ -49,8 +52,31 @@ export const videoBlockData2 = {
   playIconUrl: '',
 };
 
+const waypointData = {
+    imageUrl: 'https://picsum.photos/600',
+    eyebrow: 'Waypoint',
+    heading: 'This is a media block used in a waypoint',
+    body: 'The background of this component changes color when it comes into view on the screen. This can be used to trigger css or js upon scrolling.',
+    isReversed: false,
+    buttons: [
+      {
+        label: 'Lorem ipsum',
+        link: '/',
+        theme: 'btn-primary',
+      },
+    ],
+};
+
 
 export default function KitchenSink() {
+  
+  const handleMediaEnter = () => {
+    console.log('first media block entered viewport');
+  };
+  const handleMediaExit = () => {
+    console.log('first media block exited viewport');
+  };
+
   return (
     <main className="p-8">
       <div className="container kitchen-sink">
@@ -239,7 +265,21 @@ export default function KitchenSink() {
         <hr className="mb-6" />
         <h2 className="heading mb-4">Waypoint</h2>
         <section className="mb-12">
-          {/* Waypoint */}
+         <Waypoint
+            onEnter={handleMediaEnter}
+            onExit={handleMediaExit}
+            threshold={0.9}
+            activeClass="bg-white transition-colors duration-600"
+            inactiveClass="bg-off-white transition-colors duration-600"
+          >
+            <MediaBlock {...waypointData} />
+          </Waypoint>
+        </section>
+
+        <hr className="mb-6" />
+        <h2 className="heading mb-4">Modals</h2>
+        <section className="mb-12">
+          {/* Modals */}
         </section>
       </div>
     </main>

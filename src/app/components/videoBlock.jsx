@@ -39,7 +39,7 @@ const VideoBlock = ({ youTubeUrl, thumbnailUrl, playIconUrl, isReversed }) => {
               <img
                 src={thumbnailUrl || defaultThumbnail}
                 alt="Video thumbnail"
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-cover aspect-video"
               />
               <div className="play-overlay absolute inset-0 flex items-center justify-center pointer-events-none">
                 {playIconUrl ? (

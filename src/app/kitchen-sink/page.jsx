@@ -4,6 +4,9 @@ import '../../../styles/pages/kitchen-sink.scss';
 import MediaBlock from '../components/mediaBlock';
 import VideoBlock from '../components/videoBlock';
 import Waypoint from '../components/waypoint';
+import TextModal from '../components/textModal';
+import VideoModal from '../components/videoModal';
+
 
 const mediaBlockData = {
     imageUrl: 'https://picsum.photos/1200',
@@ -67,6 +70,29 @@ const waypointData = {
     ],
 };
 
+const textModalData = {
+  triggerLabel: 'Open Text Modal',
+  triggerTheme: 'btn-primary',      
+  triggerSize: 'btn',             
+  title: 'Terms & Notes',
+  body: 'This modal’s text and button styles are powered by props coming from the Kitchen Sink—same pattern as your other blocks.',
+  closeLabel: 'Close',
+  closeTheme: 'btn-primary',      
+  closeSize: 'btn',
+};
+
+const modalVideoData = {
+  triggerLabel: 'Open Video Modal',
+  triggerTheme: 'btn-secondary--outline',   
+  triggerSize: 'btn',
+  title: 'Product Overview',
+  video: {
+    ...videoBlockData,           
+  },
+  closeLabel: 'Close',
+  closeTheme: 'btn-secondary--outline',
+  closeSize: 'btn--s',
+};
 
 export default function KitchenSink() {
   
@@ -279,7 +305,25 @@ export default function KitchenSink() {
         <hr className="mb-6" />
         <h2 className="heading mb-4">Modals</h2>
         <section className="mb-12">
-          {/* Modals */}
+
+          <div className="row">
+            <div className="col">
+                <div className="box">
+                    <div className="subheading mb-2">Text Modal</div>
+                    <div className="body mb-4">This button opens a popup text modal</div>
+                    <TextModal {...textModalData} />
+                </div>
+            </div>
+
+            <div className="col">
+                <div className="box">
+                    <div className="subheading mb-2">Video Modal</div>
+                    <div className="body mb-4">This button opens a popup video modal</div>
+                    <VideoModal {...modalVideoData} />
+                </div>
+            </div>
+          </div>
+
         </section>
       </div>
     </main>

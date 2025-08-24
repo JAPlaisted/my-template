@@ -6,7 +6,8 @@ import VideoBlock from '../components/videoBlock';
 import Waypoint from '../components/waypoint';
 import TextModal from '../components/textModal';
 import VideoModal from '../components/videoModal';
-
+import Hero from '../components/hero';
+import Navbar from '../components/nav';
 
 const mediaBlockData = {
     imageUrl: 'https://picsum.photos/1200',
@@ -93,6 +94,46 @@ const modalVideoData = {
   closeTheme: 'btn-secondary--outline',
   closeSize: 'btn--s',
 };
+
+const heroImageData = {
+  bgType: 'image',
+  imageUrl: 'https://picsum.photos/1920/1080',
+  imageAlt: 'Sample background',
+  overlay: true,
+  overlayOpacity: 0.35,
+  overline: 'Overline',
+  heading: 'Build Faster with Your Template',
+  body: 'A reusable Next.js starter with components, utilities, and a polished DX.',
+  button: { label: 'Get Started', link: '/', theme: 'btn-primary', size: 'btn--l' },
+  align: 'left', 
+};
+
+const heroVideoData = {
+  bgType: 'video',
+  videoSrc: '/video/hero.mp4',    
+  videoPoster: '/img/hero-poster.webp',
+  overlay: true,
+  overlayOpacity: 0.4,
+  overline: 'Now Playing',
+  heading: 'Crisp, Full-Bleed Video',
+  body: 'Local MP4 with autoplay, muted, loop, and playsInline for mobile.',
+  button: { label: 'Learn More', link: '/', theme: 'btn-secondary', size: 'btn' },
+  align: 'center',
+};
+
+const navbarData = {
+  brandTitle: 'Sommet',
+  navItems: [
+    {label: 'Home', href: '/'},
+    {label: 'Features', href: '/features'},
+    {label: 'Pricing', href: '/pricing'},
+    {label: 'Docs', href: '/docs'},
+    {label: 'About', href: '/about'},
+  ],
+  login: {label: 'Log in', href: '/login', theme: 'btn-primary', size: 'btn--s'},
+  sticky: true,
+};
+
 
 export default function KitchenSink() {
   
@@ -324,6 +365,22 @@ export default function KitchenSink() {
             </div>
           </div>
 
+        </section>
+
+        <hr className="mb-6" />
+        <h2 className="heading mb-4">Hero</h2>
+        <section>
+          <Hero {...heroImageData} />
+        </section>
+
+        <section className="mb-12">
+          <Hero {...heroVideoData} />
+        </section>
+
+        <hr className="mb-6" />
+        <h2 className="heading mb-4">Nav</h2>
+        <section>
+          <Navbar {...navbarData} />
         </section>
       </div>
     </main>

@@ -9,6 +9,7 @@ import VideoModal from '../components/videoModal';
 import Hero from '../components/hero';
 import Navbar from '../components/nav';
 import Footer from '../components/footer';
+import FAQ from '../components/faq';
 
 const mediaBlockData = {
     imageUrl: 'https://picsum.photos/1200',
@@ -173,6 +174,38 @@ export const footerData = {
   legalLinks: [
     {label: 'Privacy Policy', href: '/privacy'},
     {label: 'Terms of Service', href: '/terms'},
+  ],
+};
+
+export const faqData = {
+  allowMultiple: false,
+  defaultOpen: [0],
+  items: [
+    {
+      question: 'Can I use this template commercially?',
+      answer:
+        'Yes. You can use it for client work and your own projects. A credit is appreciated but not required.',
+    },
+    {
+      question: 'How do I change colors and typography?',
+      answer:
+        'Update your global SCSS tokens (colors, spacing, typography classes) and the components will inherit them.',
+    },
+    {
+      question: 'Does the video hero support autoplay on mobile?',
+      answer:
+        'Yes—use an internal MP4, keep it muted with playsInline. Provide a poster for smooth loading.',
+    },
+    {
+      question: 'How do I add more nav items?',
+      answer:
+        'Pass an array of {label, href} to the Navbar via the Kitchen Sink data. The component renders whatever you provide.',
+    },
+    {
+      question: 'Can multiple FAQ items be open at once?',
+      answer:
+        'Yep. Set allowMultiple to true (as shown here). With allowMultiple=false, it behaves like a single-open accordion.',
+    },
   ],
 };
 
@@ -409,11 +442,13 @@ export default function KitchenSink() {
         </section>
 
         <hr className="mb-6" />
-        <h2 className="heading mb-4">Hero</h2>
-        <section>
+        <h2 className="heading mb-4">Image Hero</h2>
+        <section className="mb-12">
           <Hero {...heroImageData} />
         </section>
 
+        <hr className="mb-6" />
+        <h2 className="heading mb-4">Video Hero</h2>
         <section className="mb-12">
           <Hero {...heroVideoData} />
         </section>
@@ -428,6 +463,12 @@ export default function KitchenSink() {
         <h2 className="heading mb-4">Footer</h2>
         <section>
           <Footer {...footerData} />
+        </section>
+
+        <hr className="mb-6" />
+        <h2 className="heading mb-4">FAQ</h2>
+        <section className="mb-12">
+          <FAQ {...faqData} />
         </section>
         
       </div>

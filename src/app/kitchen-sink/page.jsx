@@ -8,6 +8,7 @@ import TextModal from '../components/textModal';
 import VideoModal from '../components/videoModal';
 import Hero from '../components/hero';
 import Navbar from '../components/nav';
+import Footer from '../components/footer';
 
 const mediaBlockData = {
     imageUrl: 'https://picsum.photos/1200',
@@ -134,6 +135,46 @@ const navbarData = {
   sticky: true,
 };
 
+export const footerData = {
+  brandTitle: 'Sommet',
+  description: 'Building robots, tools, and ideas for a smarter world.',
+  linkColumns: [
+    {
+      heading: 'Product',
+      links: [
+        {label: 'Features', href: '/features'},
+        {label: 'Pricing', href: '/pricing'},
+        {label: 'Docs', href: '/docs'},
+      ],
+    },
+    {
+      heading: 'Company',
+      links: [
+        {label: 'About', href: '/about'},
+        {label: 'Careers', href: '/careers'},
+        {label: 'Blog', href: '/blog'},
+      ],
+    },
+    {
+      heading: 'Support',
+      links: [
+        {label: 'Help Center', href: '/help'},
+        {label: 'Contact', href: '/contact'},
+        {label: 'Status', href: '/status'},
+      ],
+    },
+  ],
+  socials: [
+    {icon: '🐦', label: 'Twitter', href: 'https://twitter.com'},
+    {icon: '💼', label: 'LinkedIn', href: 'https://linkedin.com'},
+    {icon: '📸', label: 'Instagram', href: 'https://instagram.com'},
+  ],
+  copyright: `© ${new Date().getFullYear()} Sommet. All rights reserved.`,
+  legalLinks: [
+    {label: 'Privacy Policy', href: '/privacy'},
+    {label: 'Terms of Service', href: '/terms'},
+  ],
+};
 
 export default function KitchenSink() {
   
@@ -382,6 +423,13 @@ export default function KitchenSink() {
         <section>
           <Navbar {...navbarData} />
         </section>
+
+        <hr className="mb-6" />
+        <h2 className="heading mb-4">Footer</h2>
+        <section>
+          <Footer {...footerData} />
+        </section>
+        
       </div>
     </main>
   );

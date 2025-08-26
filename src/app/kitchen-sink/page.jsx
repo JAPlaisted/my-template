@@ -10,6 +10,9 @@ import Hero from '../components/hero';
 import Navbar from '../components/nav';
 import Footer from '../components/footer';
 import FAQ from '../components/faq';
+import Card from '../components/card';
+import CardRow from '../components/cardRow';
+import CardGrid from '../components/cardGrid';
 
 const mediaBlockData = {
     imageUrl: 'https://picsum.photos/1200',
@@ -207,6 +210,90 @@ export const faqData = {
         'Yep. Set allowMultiple to true (as shown here). With allowMultiple=false, it behaves like a single-open accordion.',
     },
   ],
+};
+
+const cardItems = [
+  {
+    imageUrl: 'https://picsum.photos/seed/a/800/450',
+    eyebrow: 'Release',
+    heading: 'Version 1.0 is live',
+    body: 'Our first stable release with components, utilities, and a polished DX.',
+    button: { label: 'Read more', href: '/', theme: 'btn-primary', size: 'btn--s' },
+  },
+  {
+    imageUrl: 'https://picsum.photos/seed/b/800/450',
+    eyebrow: 'Guide',
+    heading: 'Styling & Theming',
+    body: 'How to swap color tokens and typography without touching components.',
+    button: { label: 'Open guide', href: '/', theme: 'btn-secondary', size: 'btn--s' },
+  },
+  {
+    imageUrl: 'https://picsum.photos/seed/c/800/450',
+    eyebrow: 'Case Study',
+    heading: 'Perf wins with Next',
+    body: 'LCP, font strategy, and image optimization—what actually moved the needle.',
+    button: { label: 'View case study', href: '/', theme: 'btn-primary--outline', size: 'btn--s' },
+  },
+  {
+    imageUrl: 'https://picsum.photos/seed/d/800/450',
+    eyebrow: 'Tutorial',
+    heading: 'Forms & Validation',
+    body: 'Build accessible forms with helpful errors and no external libs.',
+    button: { label: 'Start tutorial', href: '/', theme: 'btn-primary', size: 'btn--s' },
+  },
+  {
+    imageUrl: 'https://picsum.photos/seed/e/800/450',
+    eyebrow: 'Announcement',
+    heading: 'Dark mode shipped',
+    body: 'Theme toggle with CSS vars, persisted to localStorage.',
+    button: { label: 'Try it', href: '/', theme: 'btn-secondary', size: 'btn--s' },
+  },
+  {
+    imageUrl: 'https://picsum.photos/seed/f/800/450',
+    eyebrow: 'Blog',
+    heading: 'Design tokens',
+    body: 'How to think about scale: spacing, radius, z-index, and motion.',
+    button: { label: 'Read post', href: '/', theme: 'btn-secondary--outline', size: 'btn--s' },
+  },
+  {
+    imageUrl: 'https://picsum.photos/seed/a/800/450',
+    eyebrow: 'Release',
+    heading: 'Version 1.0 is live',
+    body: 'Our first stable release with components, utilities, and a polished DX.',
+    button: { label: 'Read more', href: '/', theme: 'btn-primary', size: 'btn--s' },
+  },
+  {
+    imageUrl: 'https://picsum.photos/seed/b/800/450',
+    eyebrow: 'Guide',
+    heading: 'Styling & Theming',
+    body: 'How to swap color tokens and typography without touching components.',
+    button: { label: 'Open guide', href: '/', theme: 'btn-secondary', size: 'btn--s' },
+  },
+  {
+    imageUrl: 'https://picsum.photos/seed/c/800/450',
+    eyebrow: 'Case Study',
+    heading: 'Perf wins with Next',
+    body: 'LCP, font strategy, and image optimization—what actually moved the needle.',
+    button: { label: 'View case study', href: '/', theme: 'btn-primary--outline', size: 'btn--s' },
+  },
+];
+
+const cardRowData = {
+  items: cardItems,  
+  perPage: 3,
+  slideBy: 3,
+  showDots: true,
+  buttonThemeOverride: 'btn-secondary',
+};
+
+const cardGridData = {
+  items: cardItems,
+  initial: 6,        
+  step: 3,         
+  max: 12,            
+  showLoadMore: true,
+  align: 'center',   
+  buttonThemeOverride: 'btn-primary--outline',
 };
 
 export default function KitchenSink() {
@@ -470,6 +557,25 @@ export default function KitchenSink() {
         <section className="mb-12">
           <FAQ {...faqData} />
         </section>
+
+        <hr className="mb-6" />
+        <h2 className="heading mb-4">Card</h2>
+        <section className="mb-12">
+          <Card {...cardItems[0]} />
+        </section>
+
+        <hr className="mb-6" />
+        <h2 className="heading mb-4">Card Row (Slider)</h2>
+        <section className="mb-12">
+          <CardRow {...cardRowData} />
+        </section>
+
+        <hr className="mb-6" />
+        <h2 className="heading mb-4">Card Grid</h2>
+        <section className="mb-12">
+          <CardGrid {...cardGridData} />
+        </section>
+
         
       </div>
     </main>

@@ -130,12 +130,10 @@ const navbarData = {
   brandTitle: 'Sommet',
   navItems: [
     {label: 'Home', href: '/'},
-    {label: 'Features', href: '/features'},
-    {label: 'Pricing', href: '/pricing'},
+    {label: 'Kitchen Sink', href: '/kitchen-sink'},
     {label: 'Docs', href: '/docs'},
-    {label: 'About', href: '/about'},
   ],
-  login: {label: 'Log in', href: '/login', theme: 'btn-primary', size: 'btn--s'},
+  login: {label: 'Log in', href: '/kitchen-sink', theme: 'btn-primary', size: 'btn--s'},
   sticky: true,
 };
 

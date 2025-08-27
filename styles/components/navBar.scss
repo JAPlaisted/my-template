@@ -4,6 +4,11 @@
   width: 100%;
   z-index: 50;
 
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  position: relative;
+  overflow: hidden;
+
   &--sticky { position: sticky; top: 0; }
 
   .nav__bar {

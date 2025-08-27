@@ -5,6 +5,11 @@
   font-size: 0.9rem;
   color: #333;
 
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  position: relative;
+  overflow: hidden;
+
   .footer__grid {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;

@@ -44,24 +44,24 @@ export default function CardRow({
             </div>
           ))}
         </div>
-
-        <button
-          className="card-row__nav card-row__nav--prev"
-          onClick={prev}
-          aria-label="Previous"
-          disabled={!canPrev}
-        >
-          ‹
-        </button>
-        <button
-          className="card-row__nav card-row__nav--next"
-          onClick={next}
-          aria-label="Next"
-          disabled={!canNext}
-        >
-          ›
-        </button>
       </div>
+
+      <button
+        className="card-row__nav card-row__nav--prev"
+        onClick={prev}
+        aria-label="Previous"
+        disabled={!canPrev}
+      >
+        ‹
+      </button>
+      <button
+        className="card-row__nav card-row__nav--next"
+        onClick={next}
+        aria-label="Next"
+        disabled={!canNext}
+      >
+        ›
+      </button>
 
       {showDots && pages.length > 1 && (
         <div className="card-row__dots" role="tablist" aria-label="Slides">

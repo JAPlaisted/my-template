@@ -227,7 +227,7 @@ export default function Home() {
             activeClass="bg-white transition-colors duration-600 in-view"
             inactiveClass="bg-off-white transition-colors duration-600"
           >
-            <div className="box bg-off-white">
+            <div className="bg-off-white">
               <CardRow {...cardRowData} />
             </div>
           </Waypoint>
@@ -290,7 +290,7 @@ export default function Home() {
             activeClass="bg-accent text-white transition-colors duration-600"
             inactiveClass="bg-off-white text-dark transition-colors duration-600"
           >
-            <div className="box bg-off-white">
+            <div className="bg-off-white">
               {videoReady ? <VideoBlock {...videoBlockData} /> : <div className="body">Loading video…</div>}
             </div>
           </Waypoint>
@@ -309,7 +309,7 @@ export default function Home() {
             activeClass="bg-white transition-colors duration-600"
             inactiveClass="bg-off-white transition-colors duration-600"
           >
-            <div className="box bg-off-white">
+            <div className="bg-off-white">
               <CardGrid {...cardGridData} />
             </div>
           </Waypoint>

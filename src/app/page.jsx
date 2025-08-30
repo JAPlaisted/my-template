@@ -180,7 +180,6 @@ function Counter({to = 100, duration = 900, start = false}) {
 
 export default function Home() {
   const [progressStep, setProgressStep] = useState(0);
-  const [showStickyCTA, setShowStickyCTA] = useState(false);
   const [statsActive, setStatsActive] = useState(false);
   const [videoReady, setVideoReady] = useState(false);
 
@@ -196,8 +195,7 @@ export default function Home() {
       {/* HERO (full-bleed; no bg-swap needed) */}
       <Waypoint
         threshold={0.6}
-        onEnter={() => { setProgressStep(0); setShowStickyCTA(false); }}
-        onExit={() => { setShowStickyCTA(true); }}
+        onEnter={() => { setProgressStep(0); }}
       >
         <section id="hero">
           <Hero {...heroImageData} />
@@ -240,27 +238,26 @@ export default function Home() {
           <Waypoint
             threshold={0.5}
             onEnter={() => { setStatsActive(true); setProgressStep(3); }}
-            activeClass="bg-white transition-colors duration-600"
-            inactiveClass="bg-light transition-colors duration-600"
+            activeClass="bg-light transition-colors duration-600"
+            inactiveClass="bg-white transition-colors duration-600"
           >
-            <div className="box bg-light">
-              <div className="eyebrow mb-2">Numbers (loosely scientific)</div>
-              <div className="heading mb-6">Built to move fast — without breaking nice things</div>
-              <div className="row">
-                <div className="col">
+            <div className="box text-center">
+              <div className="heading mb-12">Built to move fast —<br></br>without breaking nice things</div> 
+              <div className="row justify-evenly">
+                <div>
                   <div className="subheading--s">Components</div>
                   <div className="heading--xl"><Counter to={18} start={statsActive} /></div>
                 </div>
-                <div className="col">
+                <div>
                   <div className="subheading--s">KB CSS</div>
                   <div className="heading--xl"><Counter to={12} start={statsActive} /></div>
                 </div>
-                <div className="col">
+                <div>
                   <div className="subheading--s">Setup (min)</div>
                   <div className="heading--xl"><Counter to={5} start={statsActive} /></div>
                 </div>
               </div>
-              <div className="body mt-6">These counters kick in when this box pops into view. Science!</div>
+              <div className="body mt-12">These counters kick in when this box pops into view. Science!</div>
             </div>
           </Waypoint>
         </div>
@@ -337,7 +334,7 @@ export default function Home() {
         <div className="box flex flex-col items-center mt-12">
           <div className="eyebrow">End of the line</div>
           <div className="heading">CTA Callout</div>
-          <div className="body mt-2 text-center">
+          <div className="body mt-2 text-center max-w-700">
             Well, this is it — the CTA Callout. The only thing left is the footer and, let’s be honest, you can see that already.
             Like what you see? Feeling commitment-curious? Go peek at the{' '}
             <a href="/components-library">Components</a>.
@@ -350,38 +347,6 @@ export default function Home() {
       </section>
 
       <Footer />
-
-      {/* Sticky CTA */}
-      {showStickyCTA && (
-        <div
-          className="sticky-cta"
-          style={{
-            position: 'fixed',
-            left: 0,
-            right: 0,
-            bottom: 16,
-            display: 'flex',
-            justifyContent: 'center',
-            pointerEvents: 'none',
-            zIndex: 40,
-          }}
-        >
-          <div
-            className="box"
-            style={{
-              display: 'flex',
-              gap: 16,
-              alignItems: 'center',
-              pointerEvents: 'auto',
-              boxShadow: '0 10px 30px rgba(0,0,0,0.12)',
-            }}
-          >
-            <div className="subheading--s">Ready to poke the components?</div>
-            <a className="button btn btn-primary" href="/components-library">Components</a>
-            <a className="button btn btn-secondary--outline" href="/docs">Read Docs</a>
-          </div>
-        </div>
-      )}
 
       {/* Progress rail (clickable) */}
       <nav

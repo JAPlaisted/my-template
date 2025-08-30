@@ -1,6 +1,6 @@
 'use client';
 
-import '../../../styles/pages/kitchen-sink.scss';
+import '../../../styles/pages/components.scss';
 import MediaBlock from '../components/mediaBlock';
 import VideoBlock from '../components/videoBlock';
 import Waypoint from '../components/waypoint';
@@ -81,7 +81,7 @@ const textModalData = {
   triggerTheme: 'btn-primary',      
   triggerSize: 'btn',             
   title: 'Terms & Notes',
-  body: 'This modal’s text and button styles are powered by props coming from the Kitchen Sink—same pattern as your other blocks.',
+  body: 'This modal’s text and button styles are powered by props coming from the components library. Same pattern as your other blocks.',
   closeLabel: 'Close',
   closeTheme: 'btn-primary',      
   closeSize: 'btn',
@@ -130,10 +130,10 @@ const navbarData = {
   brandTitle: 'Sommet',
   navItems: [
     {label: 'Home', href: '/'},
-    {label: 'Kitchen Sink', href: '/kitchen-sink'},
+    {label: 'Components', href: '/components-library'},
     {label: 'Docs', href: '/docs'},
   ],
-  login: {label: 'Log in', href: '/kitchen-sink', theme: 'btn-primary', size: 'btn--s'},
+  login: {label: 'Log in', href: '/components-library', theme: 'btn-primary', size: 'btn--s'},
   sticky: true,
 };
 
@@ -200,7 +200,7 @@ export const faqData = {
     {
       question: 'How do I add more nav items?',
       answer:
-        'Pass an array of {label, href} to the Navbar via the Kitchen Sink data. The component renders whatever you provide.',
+        'Pass an array of {label, href} to the Navbar via the components library data. The component renders whatever you provide.',
     },
     {
       question: 'Can multiple FAQ items be open at once?',
@@ -294,7 +294,7 @@ const cardGridData = {
   buttonThemeOverride: 'btn-primary--outline',
 };
 
-export default function KitchenSink() {
+export default function ComponentsLibrary() {
   
   const handleMediaEnter = () => {
     console.log('first media block entered viewport');
@@ -305,8 +305,8 @@ export default function KitchenSink() {
 
   return (
     <main className="p-8">
-      <div className="container kitchen-sink">
-        <h1 className="heading--xl mb-6">Kitchen Sink</h1>
+      <div className="container components-library">
+        <h1 className="heading--xl mb-6">Components Library</h1>
 
         <hr className="mb-6" />
         <h3 className="eyebrow mb-4 text-primary">Elements</h3>
@@ -443,7 +443,7 @@ export default function KitchenSink() {
 
         <hr className="mb-6" />
         <h2 className="heading--l mb-6">Layout</h2>
-        <section className="mb-6 kitchen-layout">
+        <section className="mb-6 components-layout">
             <div className="box">
                 <div className="eyebrow">Layout Sample</div>
                 <div className="heading">Using Layout Classes</div>

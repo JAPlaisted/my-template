@@ -1,7 +1,7 @@
 @import '../variables';
 @import '../mixins';
 
-.kitchen-sink {
+.components-library {
   .responsive-box {
     background-color: $honeydew;
     padding: 1.5rem;
@@ -28,8 +28,5 @@
       flex-direction: column;
       justify-content: center;
     }
-  }
-  .kitchen-layout {
-    
   }
 }

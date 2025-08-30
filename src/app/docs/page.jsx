@@ -16,7 +16,7 @@ const navbarData = {
   brandTitle: 'Sommet',
   navItems: [
     {label: 'Home', href: '/'},
-    {label: 'Kitchen Sink', href: '/kitchen-sink'},
+    {label: 'Components', href: '/components-library'},
     {label: 'Docs', href: '/docs'},
   ],
   login: {label: 'Log in', href: '/login', theme: 'btn-primary', size: 'btn--s'},
@@ -28,7 +28,7 @@ const footerData = {
   description: 'Building robots, tools, and ideas for a smarter world.',
   linkColumns: [
     { heading: 'Product', links: [
-      {label: 'Kitchen Sink', href: '/kitchen-sink'},
+      {label: 'Components', href: '/components-library'},
       {label: 'Status', href: '/status'},
     ]},
     { heading: 'Company', links: [
@@ -58,8 +58,8 @@ export default function Docs() {
           <div className="eyebrow">Documentation</div>
           <h1 className="heading--xl mb-2">Template Docs</h1>
           <div className="body mb-6">
-            Everything in the Kitchen Sink, explained. Copy/paste props, see small demos, and jump to the full{' '}
-            <a href="/kitchen-sink">/kitchen-sink</a> page for live previews.
+            Everything in the components library, explained. Copy/paste props, see small demos, and jump to the full{' '}
+            <a href="/components-library">/components-library</a> page for live previews.
           </div>
 
           <nav className="box bg-off-white">
@@ -164,7 +164,7 @@ export default function Docs() {
               overline="Docs"
               heading="All components, one template"
               body="Swap tokens, ship fast."
-              button={{label:'Open Kitchen Sink', link:'/kitchen-sink', theme:'btn-primary', size:'btn'}}
+              button={{label:'Components', link:'/components-library', theme:'btn-primary', size:'btn'}}
               align="left"
             />
           </div>
@@ -227,7 +227,7 @@ export default function Docs() {
               heading="Media left, text right"
               body="Toggle isReversed for the other side."
               isReversed={false}
-              buttons={[{label:'See Kitchen Sink', link:'/kitchen-sink', theme:'btn-primary'}]}
+              buttons={[{label:'Components', link:'/components-library', theme:'btn-primary'}]}
             />
           </div>
         </div>
@@ -383,7 +383,7 @@ export default function Docs() {
               defaultOpen={[0]}
               items={[
                 {question:'Can I use it commercially?', answer:'Yes—client work and personal projects are fine.'},
-                {question:'Where are the examples?', answer:'See the Kitchen Sink at /kitchen-sink.'},
+                {question:'Where are the examples?', answer:'See the components library at /components-library.'},
               ]}
             />
           </div>
@@ -500,7 +500,7 @@ export default function Docs() {
 
       <section className="py-12">
         <div className="container text-center">
-          <a className="button btn btn-primary" href="/kitchen-sink">Open the Kitchen Sink</a>
+          <a className="button btn btn-primary" href="/components-library">Open the Components Library</a>
         </div>
       </section>
 

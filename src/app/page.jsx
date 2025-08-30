@@ -17,10 +17,10 @@ const navbarData = {
   brandTitle: 'Sommet',
   navItems: [
     {label: 'Home', href: '/'},
-    {label: 'Kitchen Sink', href: '/kitchen-sink'},
+    {label: 'Components', href: '/components-library'},
     {label: 'Docs', href: '/docs'},
   ],
-  login: {label: 'Log in', href: '/kitchen-sink', theme: 'btn-primary', size: 'btn--s'},
+  login: {label: 'Log in', href: '/components-library', theme: 'btn-primary', size: 'btn--s'},
   sticky: true,
 };
 
@@ -32,8 +32,8 @@ const heroImageData = {
   overlayOpacity: 0.4,
   overline: 'Indie Hacker Starter',
   heading: 'Ship frontends fast',
-  body: 'Skip to the fun part: reusable blocks, SCSS tokens, and a full Kitchen Sink you can shamelessly copy from.',
-  button: {label: 'Explore Components', link: '/kitchen-sink', theme: 'btn-primary', size: 'btn--l'},
+  body: 'Skip to the fun part: reusable blocks, SCSS tokens, and a full component library you can shamelessly copy from.',
+  button: {label: 'Explore Components', link: '/components-library', theme: 'btn-primary', size: 'btn--l'},
   align: 'left',
 };
 
@@ -44,7 +44,7 @@ const featureBlock = {
   body: 'Cards, sliders, media blocks, modals, heroes, FAQ — all wired to your design tokens. Think LEGO®, but for grown-up startups.',
   isReversed: false,
   buttons: [
-    {label: 'View Kitchen Sink', link: '/kitchen-sink', theme: 'btn-primary'},
+    {label: 'View Components', link: '/components-library', theme: 'btn-primary'},
     {label: 'Read Docs', link: '/docs', theme: 'btn-secondary--outline'},
   ],
 };
@@ -64,42 +64,42 @@ const cards = [
     eyebrow: 'Release',
     heading: 'v1.0 is live',
     body: 'Stable enough to brag in a README. Polished defaults out of the gate.',
-    button: {label: 'Kitchen Sink', href: '/kitchen-sink', theme: 'btn-primary', size: 'btn--s'},
+    button: {label: 'Components', href: '/components-library', theme: 'btn-primary', size: 'btn--s'},
   },
   {
     imageUrl: 'https://picsum.photos/seed/b/800/450',
     eyebrow: 'Guide',
     heading: 'Styling & Theming',
     body: 'Change the vibe in minutes by swapping tokens — components just follow along.',
-    button: {label: 'Kitchen Sink', href: '/kitchen-sink', theme: 'btn-secondary', size: 'btn--s'},
+    button: {label: 'Components', href: '/components-library', theme: 'btn-secondary', size: 'btn--s'},
   },
   {
     imageUrl: 'https://picsum.photos/seed/c/800/450',
     eyebrow: 'Case Study',
     heading: 'Perf wins with Next',
     body: 'LCP so quick it blushes. Fonts and images behaving like perfect citizens.',
-    button: {label: 'Kitchen Sink', href: '/kitchen-sink', theme: 'btn-primary--outline', size: 'btn--s'},
+    button: {label: 'Components', href: '/components-library', theme: 'btn-primary--outline', size: 'btn--s'},
   },
   {
     imageUrl: 'https://picsum.photos/seed/d/800/450',
     eyebrow: 'Tutorial',
     heading: 'Forms & Validation',
     body: 'Helpful errors, keyboard-friendly, zero drama. Ship it with confidence.',
-    button: {label: 'Kitchen Sink', href: '/kitchen-sink', theme: 'btn-primary', size: 'btn--s'},
+    button: {label: 'Components', href: '/components-library', theme: 'btn-primary', size: 'btn--s'},
   },
   {
     imageUrl: 'https://picsum.photos/seed/e/800/450',
     eyebrow: 'Announcement',
     heading: 'Dark mode shipped',
     body: 'Night-owl approved. CSS vars + localStorage = ✨',
-    button: {label: 'Kitchen Sink', href: '/kitchen-sink', theme: 'btn-secondary', size: 'btn--s'},
+    button: {label: 'Components', href: '/components-library', theme: 'btn-secondary', size: 'btn--s'},
   },
   {
     imageUrl: 'https://picsum.photos/seed/f/800/450',
     eyebrow: 'Blog',
     heading: 'Design tokens',
     body: 'Give your CSS a brain: spacing, radius, z-index, and motion.',
-    button: {label: 'Kitchen Sink', href: '/kitchen-sink', theme: 'btn-secondary--outline', size: 'btn--s'},
+    button: {label: 'Components', href: '/components-library', theme: 'btn-secondary--outline', size: 'btn--s'},
   },
 ];
 
@@ -137,7 +137,7 @@ const faqData = {
     },
     {
       question: 'Where do I ogle every component?',
-      answer: 'March confidently to the Kitchen Sink at /kitchen-sink. Bring your copy-paste muscles.',
+      answer: 'March confidently to the component library at /components-library. Bring your copy-paste muscles.',
     },
     {
       question: 'Will the video hero actually autoplay on mobile?',
@@ -340,12 +340,12 @@ export default function Home() {
           <div className="body mt-2 text-center">
             Well, this is it — the CTA Callout. The only thing left is the footer and, let’s be honest, you can see that already.
             Like what you see? Feeling commitment-curious? Go peek at the{' '}
-            <a href="/kitchen-sink">Kitchen Sink</a>.
+            <a href="/components-library">Components</a>.
           </div>
         </div>
 
         <div className="mt-2 text-center">
-          <a className="button btn btn-primary" href="/kitchen-sink">Open the Kitchen Sink</a>
+          <a className="button btn btn-primary" href="/components-library">Open the Components Library</a>
         </div>
       </section>
 
@@ -377,7 +377,7 @@ export default function Home() {
             }}
           >
             <div className="subheading--s">Ready to poke the components?</div>
-            <a className="button btn btn-primary" href="/kitchen-sink">Open Kitchen Sink</a>
+            <a className="button btn btn-primary" href="/components-library">Components</a>
             <a className="button btn btn-secondary--outline" href="/docs">Read Docs</a>
           </div>
         </div>

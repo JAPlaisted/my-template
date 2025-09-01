@@ -119,6 +119,48 @@ const faqData = {
   ],
 };
 
+export const footerData = {
+  brandTitle: 'Sommet',
+  description: 'Building robots, tools, and ideas for a smarter world.',
+  linkColumns: [
+    {
+      heading: 'Product',
+      links: [
+        {label: 'Features', href: '/features'},
+        {label: 'Pricing', href: '/pricing'},
+        {label: 'Docs', href: '/docs'},
+      ],
+    },
+    {
+      heading: 'Company',
+      links: [
+        {label: 'About', href: '/about'},
+        {label: 'Careers', href: '/careers'},
+        {label: 'Blog', href: '/blog'},
+      ],
+    },
+    {
+      heading: 'Support',
+      links: [
+        {label: 'Help Center', href: '/help'},
+        {label: 'Contact', href: '/contact'},
+        {label: 'Status', href: '/status'},
+      ],
+    },
+  ],
+  socials: [
+    {icon: '🐦', label: 'Twitter', href: 'https://twitter.com'},
+    {icon: '💼', label: 'LinkedIn', href: 'https://linkedin.com'},
+    {icon: '📸', label: 'Instagram', href: 'https://instagram.com'},
+  ],
+  copyright: `© ${new Date().getFullYear()} Sommet. All rights reserved.`,
+  legalLinks: [
+    {label: 'Privacy Policy', href: '/privacy'},
+    {label: 'Terms of Service', href: '/terms'},
+  ],
+};
+
+
 /* ---------- Progress dots ---------- */
 
 const SECTIONS = [
@@ -175,7 +217,7 @@ export default function Home() {
       <section id="feature" className="pt-24">
         <div className="container">
           <Waypoint
-            threshold={0.85}
+            threshold={1}
             onEnter={() => setProgressStep(1)}
             activeClass="bg-white transition-colors duration-600"
             inactiveClass="bg-off-white transition-colors duration-600"
@@ -189,7 +231,7 @@ export default function Home() {
       <section id="cards" className="pt-24">
         <div className="container">
           <Waypoint
-            threshold={0.6}
+            threshold={1}
             onEnter={() => setProgressStep(2)}
             activeClass="bg-white transition-colors duration-600 in-view"
             inactiveClass="bg-off-white transition-colors duration-600"
@@ -205,7 +247,7 @@ export default function Home() {
       <section id="stats" className="pt-24">
         <div className="container">
           <Waypoint
-            threshold={0.5}
+            threshold={1}
             onEnter={() => { setStatsActive(true); setProgressStep(3); }}
             activeClass="bg-light transition-colors duration-600"
             inactiveClass="bg-white transition-colors duration-600"
@@ -237,7 +279,7 @@ export default function Home() {
         <div className="container">
           <h2 className="heading mb-4">FAQ</h2>
           <Waypoint
-            threshold={0.5}
+            threshold={1}
             onEnter={() => setProgressStep(7)}
             activeClass="bg-white transition-colors duration-600"
             inactiveClass="bg-off-white transition-colors duration-600"
@@ -265,7 +307,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Footer />
+      <Footer {...footerData} />
 
       {/* Progress rail (clickable) */}
       <nav

@@ -5,8 +5,6 @@ import Navbar from './components/nav';
 import Hero from './components/hero';
 import MediaBlock from './components/mediaBlock';
 import CardRow from './components/cardRow';
-import CardGrid from './components/cardGrid';
-import VideoBlock from './components/videoBlock';
 import FAQ from './components/faq';
 import Footer from './components/footer';
 import Waypoint from './components/waypoint';
@@ -47,15 +45,6 @@ const featureBlock = {
     {label: 'View Components', link: '/components-library', theme: 'btn-primary'},
     {label: 'Read Docs', link: '/docs', theme: 'btn-secondary--outline'},
   ],
-};
-
-const secondBlock = {
-  imageUrl: 'https://picsum.photos/seed/tools/800/600',
-  eyebrow: 'DX your future self will high-five',
-  heading: 'SCSS tokens, utilities, and no TypeScript required (unless you want it)',
-  body: 'Keep it simple: semantic classes, responsive mixins, and small composable components. Build features, not yak-shaves.',
-  isReversed: true,
-  buttons: [{label: 'Get Started', link: '/docs', theme: 'btn-primary'}],
 };
 
 const cards = [
@@ -111,22 +100,6 @@ const cardRowData = {
   buttonThemeOverride: 'btn-secondary',
 };
 
-const cardGridData = {
-  items: cards,
-  initial: 3,
-  step: 3,
-  max: 12,
-  showLoadMore: true,
-  align: 'center',
-  buttonThemeOverride: 'btn-primary--outline',
-};
-
-const videoBlockData = {
-  youTubeUrl: 'https://www.youtube.com/watch?v=nVNIoQUcFI4',
-  thumbnailUrl: '',
-  playIconUrl: '',
-};
-
 const faqData = {
   allowMultiple: false,
   defaultOpen: [0],
@@ -153,9 +126,6 @@ const SECTIONS = [
   { id: 'feature', label: 'Features' },
   { id: 'cards',   label: 'Cards' },
   { id: 'stats',   label: 'Stats' },
-  { id: 'second',  label: 'DX' },
-  { id: 'video',   label: 'Video' },
-  { id: 'grid',    label: 'Explore' },
   { id: 'faq',     label: 'FAQ' },
 ];
 
@@ -181,7 +151,6 @@ function Counter({to = 100, duration = 900, start = false}) {
 export default function Home() {
   const [progressStep, setProgressStep] = useState(0);
   const [statsActive, setStatsActive] = useState(false);
-  const [videoReady, setVideoReady] = useState(false);
 
   const scrollTo = (id) => {
     const el = document.getElementById(id);
@@ -203,7 +172,7 @@ export default function Home() {
       </Waypoint>
 
       {/* FEATURES — apply bg swap to the MediaBlock surface ONLY */}
-      <section id="feature" className="py-12">
+      <section id="feature" className="pt-24">
         <div className="container">
           <Waypoint
             threshold={0.85}
@@ -217,7 +186,7 @@ export default function Home() {
       </section>
 
       {/* CARDS ROW — add subtle surface + elevate on active */}
-      <section id="cards" className="py-6">
+      <section id="cards" className="pt-24">
         <div className="container">
           <Waypoint
             threshold={0.6}
@@ -233,7 +202,7 @@ export default function Home() {
       </section>
 
       {/* STATS — light -> white swap on the inner box; counters start on enter */}
-      <section id="stats" className="py-12">
+      <section id="stats" className="pt-24">
         <div className="container">
           <Waypoint
             threshold={0.5}
@@ -263,58 +232,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECONDARY FEATURE — same surface swap as the first media block */}
-      <section id="second" className="py-12">
-        <div className="container">
-          <Waypoint
-            threshold={0.8}
-            onEnter={() => setProgressStep(4)}
-            activeClass="bg-white transition-colors duration-600"
-            inactiveClass="bg-off-white transition-colors duration-600"
-          >
-            <MediaBlock {...secondBlock} />
-          </Waypoint>
-        </div>
-      </section>
-
-      {/* VIDEO — darken surface on active + text flip; lazy mount inside */}
-      <section id="video" className="py-12">
-        <div className="container">
-          <div className="body mb-4">Here is Mechazilla catching a Falcon Heavy like chopsticks. This template is basically Mechazilla for your app idea.</div>
-          <Waypoint
-            threshold={0.4}
-            onEnter={() => { setVideoReady(true); setProgressStep(5); }}
-            activeClass="bg-accent text-white transition-colors duration-600"
-            inactiveClass="bg-off-white text-dark transition-colors duration-600"
-          >
-            <div className="bg-off-white">
-              {videoReady ? <VideoBlock {...videoBlockData} /> : <div className="body">Loading video…</div>}
-            </div>
-          </Waypoint>
-        </div>
-      </section>
-
-      {/* GRID / EXPLORE — white surface on active */}
-      <section id="grid" className="py-12">
-        <div className="container">
-          <h2 className="heading mb-4">Explore the components</h2>
-          <div className="body mb-6">Window-shop the blocks, then take a few home. They don’t bite.</div>
-
-          <Waypoint
-            threshold={0.6}
-            onEnter={() => setProgressStep(6)}
-            activeClass="bg-white transition-colors duration-600"
-            inactiveClass="bg-off-white transition-colors duration-600"
-          >
-            <div className="bg-off-white">
-              <CardGrid {...cardGridData} />
-            </div>
-          </Waypoint>
-        </div>
-      </section>
-
       {/* FAQ — soft surface swap */}
-      <section id="faq" className="py-12">
+      <section id="faq" className="pt-24">
         <div className="container">
           <h2 className="heading mb-4">FAQ</h2>
           <Waypoint
@@ -330,8 +249,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container pb-24">
-        <div className="box flex flex-col items-center mt-12">
+      <section className="container py-24">
+        <div className="box flex flex-col items-center">
           <div className="eyebrow">End of the line</div>
           <div className="heading">CTA Callout</div>
           <div className="body mt-2 text-center max-w-700">

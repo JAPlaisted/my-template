@@ -24,17 +24,17 @@ const navbarData = {
   sticky: true,
 };
 
-const heroImageData = {
-  bgType: 'image',
-  imageUrl: 'https://picsum.photos/1920/1080',
-  imageAlt: 'Starter kit background',
+const heroData = {
+  bgType: 'video',
+  videoSrc: '/video/hero.mp4',    
+  videoPoster: '/img/hero-poster.webp',
   overlay: true,
   overlayOpacity: 0.4,
   overline: 'Indie Hacker Starter',
   heading: 'Ship frontends fast',
-  body: 'Skip to the fun part: reusable blocks, SCSS tokens, and a full component library you can shamelessly copy from.',
-  button: {label: 'Explore Components', link: '/components-library', theme: 'btn-primary', size: 'btn--l'},
-  align: 'left',
+  body: 'Next.js boilerplate with a tastefully curated component library, sensible defaults, and production-ready code.',
+  button: { label: 'Explore Components', link: '/components-library', theme: 'btn-primary', size: 'btn--l' },
+  align: 'center',
 };
 
 const featureBlock = {
@@ -198,7 +198,7 @@ export default function Home() {
         onEnter={() => { setProgressStep(0); }}
       >
         <section id="hero">
-          <Hero {...heroImageData} />
+          <Hero {...heroData} />
         </section>
       </Waypoint>
 

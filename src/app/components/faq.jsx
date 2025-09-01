@@ -64,7 +64,7 @@ export default function FAQ({
                   onClick={() => toggle(i)}
                   onKeyDown={(e) => onHeaderKey(e, i)}
                 >
-                  <span className="faq__label subheading">{it.question}</span>
+                  <span className="faq__label subheading--s">{it.question}</span>
                   <span className="faq__chevron" aria-hidden="true" />
                 </button>
               </h3>
@@ -77,7 +77,7 @@ export default function FAQ({
                 className="faq__panel"
                 style={{ maxHeight: maxH }}
               >
-                <div className="faq__answer body">{it.answer}</div>
+                <div className="faq__answer body--s">{it.answer}</div>
               </div>
             </div>
           );

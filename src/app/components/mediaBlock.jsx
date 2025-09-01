@@ -18,13 +18,13 @@ const MediaBlock = ({
         </figure>
       )}
 
-      <div className={`col-span-1 flex flex-col justify-center p-2 md:p-6 ${ isReversed ? 'md:order-1' : 'md:order-2' }`}>
+      <div className={`col-span-1 flex flex-col justify-center p-6 ${ isReversed ? 'md:order-1' : 'md:order-2' }`}>
         {eyebrow && (
           <span className="eyebrow text-primary mb-2">{eyebrow}</span>
         )}
         {heading && <h2 className="heading mb-4">{heading}</h2>}
         {body && <p className="body mb-6">{body}</p>}
-        <div className="flex gap-3">
+        <div className="flex flex-wrap gap-3">
           {buttons.map((b, i) => {
             if (!b.label || !b.link) return null;
             return (

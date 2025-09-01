@@ -18,6 +18,11 @@
       background-color: $honeydew;
       border-color: $oxfordBlue;
     }
+
+    @include desktop-l {
+      background-color: $offWhite;
+      border-color: $coquelicot;
+    }
   }
   .color-palette {
     .box {

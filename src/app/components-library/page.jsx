@@ -304,7 +304,7 @@ export default function ComponentsLibrary() {
   };
 
   return (
-    <main className="p-8">
+    <main className="p-0 sm:p-8">
       <div className="container components-library">
         <h1 className="heading--xl mb-6">Components Library</h1>
 
@@ -404,6 +404,7 @@ export default function ComponentsLibrary() {
                 <div className="body--s mt-2">
                     <strong>{"@include mobile {"}</strong> background-color: $white; border-color: $tropicalIndigo;<strong>{"}"}</strong><br />
                     <strong>{"@include desktop {"}</strong> background-color: $honeydew; border-color: $oxfordBlue;<strong>{"}"}</strong><br />
+                    <strong>{"@include desktop-l {"}</strong> background-color: $offWhite; border-color: $coquelicot;<strong>{"}"}</strong><br />
                 </div>
             </div>
         </section>
@@ -414,29 +415,29 @@ export default function ComponentsLibrary() {
             <div className="row">
                 <div className="col">
                     <div className="body--s mb-2">.btn-primary</div>
-                    <button className="button btn--s btn-primary">Small</button>{' '}
-                    <button className="button btn btn-primary">Default</button>{' '}
-                    <button className="button btn--l btn-primary">Large</button>
+                    <button className="button btn--s btn-primary m-1">Small</button>{' '}
+                    <button className="button btn btn-primary m-1">Default</button>{' '}
+                    <button className="button btn--l btn-primary m-1">Large</button>
                 </div>
                 <div className="col">
                     <div className="body--s mb-2">.btn-secondary</div>
-                    <button className="button btn--s btn-secondary">Small</button>{' '}
-                    <button className="button btn btn-secondary">Default</button>{' '}
-                    <button className="button btn--l btn-secondary">Large</button>
+                    <button className="button btn--s btn-secondary m-1">Small</button>{' '}
+                    <button className="button btn btn-secondary m-1">Default</button>{' '}
+                    <button className="button btn--l btn-secondary m-1">Large</button>
                 </div>
             </div>
             <div className="row">
                 <div className="col">
                     <div className="body--s mb-2">.btn-primary--outline</div>
-                    <button className="button btn--s btn-primary--outline">Small</button>{' '}
-                    <button className="button btn btn-primary--outline">Default</button>{' '}
-                    <button className="button btn--l btn-primary--outline">Large</button>
+                    <button className="button btn--s btn-primary--outline m-1">Small</button>{' '}
+                    <button className="button btn btn-primary--outline m-1">Default</button>{' '}
+                    <button className="button btn--l btn-primary--outline m-1">Large</button>
                 </div>
                 <div className="col">
                     <div className="body--s mb-2">.btn-secondary--outline</div>
-                    <button className="button btn--s btn-secondary--outline">Small</button>{' '}
-                    <button className="button btn btn-secondary--outline">Default</button>{' '}
-                    <button className="button btn--l btn-secondary--outline">Large</button>
+                    <button className="button btn--s btn-secondary--outline m-1">Small</button>{' '}
+                    <button className="button btn btn-secondary--outline m-1">Default</button>{' '}
+                    <button className="button btn--l btn-secondary--outline m-1">Large</button>
                 </div>
             </div>
         </section>
@@ -475,8 +476,12 @@ export default function ComponentsLibrary() {
         <h3 className="eyebrow mb-4 text-primary">Components</h3>
         <h2 className="heading mb-4">Media Block</h2>
         <section className="mb-12">
-          <MediaBlock {...mediaBlockData} />
-          <MediaBlock {...mediaBlockData2} />
+          <div className="box">
+            <MediaBlock {...mediaBlockData} />
+          </div>
+          <div className="box">
+            <MediaBlock {...mediaBlockData2} />
+          </div>
         </section>
 
         <hr className="mb-6" />

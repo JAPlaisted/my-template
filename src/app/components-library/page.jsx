@@ -311,7 +311,7 @@ export default function ComponentsLibrary() {
         <hr className="mb-6" />
         <h3 className="eyebrow mb-4 text-primary">Elements</h3>
         <h2 className="heading--l mb-6">Typography</h2>
-        <section className="mb-6">
+        <section id="typography" className="mb-6">
 
             <div className="heading--s mb-4">.heading--s</div>
 
@@ -351,7 +351,7 @@ export default function ComponentsLibrary() {
 
         <hr className="mb-6" />
         <h2 className="heading--l mb-4">Color Palette</h2>
-        <section className="mb-6 color-palette">
+        <section id="color-palette" className="mb-6 color-palette">
           <div className="row">
             <div className="col">
               <div className="box bg-primary text-white">
@@ -396,7 +396,7 @@ export default function ComponentsLibrary() {
 
         <hr className="mb-6" />
         <h2 className="heading mb-4">Responsive Mixins</h2>
-        <section className="mb-12">
+        <section id="responsive-mixins" className="mb-12">
             <div className="responsive-box">
                 <div className="body">
                     Resize your browser to see this box change color.
@@ -411,7 +411,7 @@ export default function ComponentsLibrary() {
 
         <hr className="mb-6" />
         <h2 className="heading mb-4">Buttons</h2>
-        <section className="mb-12">
+        <section id="buttons" className="mb-12">
             <div className="row">
                 <div className="col">
                     <div className="body--s mb-2">.btn-primary</div>
@@ -444,7 +444,7 @@ export default function ComponentsLibrary() {
 
         <hr className="mb-6" />
         <h2 className="heading--l mb-6">Layout</h2>
-        <section className="mb-6 components-layout">
+        <section id="layout" className="mb-6 components-layout">
             <div className="box">
                 <div className="eyebrow">Layout Sample</div>
                 <div className="heading">Using Layout Classes</div>
@@ -475,7 +475,7 @@ export default function ComponentsLibrary() {
         <hr className="mb-6" />
         <h3 className="eyebrow mb-4 text-primary">Components</h3>
         <h2 className="heading mb-4">Media Block</h2>
-        <section className="mb-12">
+        <section id="media-block" className="mb-12">
           <div className="box">
             <MediaBlock {...mediaBlockData} />
           </div>
@@ -486,7 +486,7 @@ export default function ComponentsLibrary() {
 
         <hr className="mb-6" />
         <h2 className="heading mb-4">Video Block</h2>
-        <section className="mb-12">
+        <section id="video-block" className="mb-12">
           <div className="body mb-4">This is a video block. It plays a YouTube video in an iframe. It uses the thumbnail provided by youtube.</div>
           <VideoBlock {...videoBlockData} />
           <div className="body mt-8 mb-4 ">This is a video block. It plays a YouTube video in an iframe. It uses a custom thumbnail.</div>
@@ -495,7 +495,7 @@ export default function ComponentsLibrary() {
 
         <hr className="mb-6" />
         <h2 className="heading mb-4">Waypoint</h2>
-        <section className="mb-12">
+        <section id="waypoint" className="mb-12">
          <Waypoint
             onEnter={handleMediaEnter}
             onExit={handleMediaExit}
@@ -509,7 +509,7 @@ export default function ComponentsLibrary() {
 
         <hr className="mb-6" />
         <h2 className="heading mb-4">Modals</h2>
-        <section className="mb-12">
+        <section id="modals" className="mb-12">
 
           <div className="row">
             <div className="col">
@@ -533,49 +533,49 @@ export default function ComponentsLibrary() {
 
         <hr className="mb-6" />
         <h2 className="heading mb-4">Image Hero</h2>
-        <section className="mb-12">
+        <section id="image-hero" className="mb-12">
           <Hero {...heroImageData} />
         </section>
 
         <hr className="mb-6" />
         <h2 className="heading mb-4">Video Hero</h2>
-        <section className="mb-12">
+        <section id="video-hero" className="mb-12">
           <Hero {...heroVideoData} />
         </section>
 
         <hr className="mb-6" />
         <h2 className="heading mb-4">Nav</h2>
-        <section>
+        <section id="nav">
           <Navbar {...navbarData} />
         </section>
 
         <hr className="mb-6" />
         <h2 className="heading mb-4">Footer</h2>
-        <section>
+        <section id="footer">
           <Footer {...footerData} />
         </section>
 
         <hr className="mb-6" />
         <h2 className="heading mb-4">FAQ</h2>
-        <section className="mb-12">
+        <section id="faq" className="mb-12">
           <FAQ {...faqData} />
         </section>
 
         <hr className="mb-6" />
         <h2 className="heading mb-4">Card</h2>
-        <section className="mb-12">
+        <section id="card" className="mb-12">
           <Card {...cardItems[0]} />
         </section>
 
         <hr className="mb-6" />
         <h2 className="heading mb-4">Card Row (Slider)</h2>
-        <section className="mb-12">
+        <section id="card-row" className="mb-12">
           <CardRow {...cardRowData} />
         </section>
 
         <hr className="mb-6" />
         <h2 className="heading mb-4">Card Grid</h2>
-        <section className="mb-12">
+        <section id="card-grid" className="mb-12">
           <CardGrid {...cardGridData} />
         </section>
 

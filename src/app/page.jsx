@@ -30,7 +30,7 @@ const heroData = {
   overlayOpacity: 0.4,
   overline: 'Indie Hacker Starter',
   heading: 'Ship frontends fast',
-  body: 'Next.js boilerplate with a tastefully curated component library, sensible defaults, and production-ready code.',
+  body: 'Next.js boilerplate with a basic component library, a few options for components, and some pretty neat code.',
   button: { label: 'Explore Components', link: '/components-library', theme: 'btn-primary', size: 'btn--l' },
   align: 'center',
 };
@@ -38,8 +38,8 @@ const heroData = {
 const featureBlock = {
   imageUrl: 'https://picsum.photos/seed/stack/800/600',
   eyebrow: 'What’s in the box?',
-  heading: 'Production-ready bits, no assembly rage',
-  body: 'Cards, sliders, media blocks, modals, heroes, FAQ — all wired to your design tokens. Think LEGO®, but for grown-up startups.',
+  heading: 'Reuseable components, no extra bs',
+  body: 'Cards, sliders, media blocks, modals, heroes, FAQ — all with examples in the component library.',
   isReversed: false,
   buttons: [
     {label: 'View Components', link: '/components-library', theme: 'btn-primary'},
@@ -51,43 +51,43 @@ const cards = [
   {
     imageUrl: 'https://picsum.photos/seed/a/800/450',
     eyebrow: 'Release',
-    heading: 'v1.0 is live',
-    body: 'Stable enough to brag in a README. Polished defaults out of the gate.',
+    heading: 'Filler Content',
+    body: 'Here is some filler content since you are still here.',
     button: {label: 'Components', href: '/components-library', theme: 'btn-primary', size: 'btn--s'},
   },
   {
     imageUrl: 'https://picsum.photos/seed/b/800/450',
     eyebrow: 'Guide',
-    heading: 'Styling & Theming',
-    body: 'Change the vibe in minutes by swapping tokens — components just follow along.',
+    heading: 'Free boilerplate',
+    body: 'Yeah it\'s free, do whatever you want with it. Enjoy.',
     button: {label: 'Components', href: '/components-library', theme: 'btn-secondary', size: 'btn--s'},
   },
   {
     imageUrl: 'https://picsum.photos/seed/c/800/450',
     eyebrow: 'Case Study',
-    heading: 'Perf wins with Next',
-    body: 'LCP so quick it blushes. Fonts and images behaving like perfect citizens.',
+    heading: 'Random Headline',
+    body: 'All of this will be deleted, so I\'m not putting that much thought into it.',
     button: {label: 'Components', href: '/components-library', theme: 'btn-primary--outline', size: 'btn--s'},
   },
   {
     imageUrl: 'https://picsum.photos/seed/d/800/450',
     eyebrow: 'Tutorial',
-    heading: 'Forms & Validation',
-    body: 'Helpful errors, keyboard-friendly, zero drama. Ship it with confidence.',
+    heading: 'Random Headline',
+    body: 'Seriously, there is no need to read this text. You will get nothing from it. I promise.',
     button: {label: 'Components', href: '/components-library', theme: 'btn-primary', size: 'btn--s'},
   },
   {
     imageUrl: 'https://picsum.photos/seed/e/800/450',
     eyebrow: 'Announcement',
-    heading: 'Dark mode shipped',
-    body: 'Night-owl approved. CSS vars + localStorage = ✨',
+    heading: 'Random Headline',
+    body: 'Ok, waste your time, what do I care?',
     button: {label: 'Components', href: '/components-library', theme: 'btn-secondary', size: 'btn--s'},
   },
   {
     imageUrl: 'https://picsum.photos/seed/f/800/450',
     eyebrow: 'Blog',
-    heading: 'Design tokens',
-    body: 'Give your CSS a brain: spacing, radius, z-index, and motion.',
+    heading: 'Random Headline',
+    body: 'You could be building already. You know that?',
     button: {label: 'Components', href: '/components-library', theme: 'btn-secondary--outline', size: 'btn--s'},
   },
 ];
@@ -105,16 +105,16 @@ const faqData = {
   defaultOpen: [0],
   items: [
     {
-      question: 'Can I use this for Real Money™ projects?',
-      answer: 'Absolutely. Client work, your own product, your nemesis’s MVP — go wild. Credit is nice, not required.',
+      question: 'Can I use this for projects?',
+      answer: 'Sure, go ahead. Client work, your own product, whatever.',
     },
     {
-      question: 'Where do I ogle every component?',
-      answer: 'March confidently to the component library at /components-library. Bring your copy-paste muscles.',
+      question: 'Where do I see every component?',
+      answer: 'The component library at /components-library.',
     },
     {
-      question: 'Will the video hero actually autoplay on mobile?',
-      answer: 'Yep. Use a local MP4, keep it muted with playsInline, and add a poster so it looks classy while loading.',
+      question: 'How do I use this template?',
+      answer: 'Fork it in Github, and build build build.',
     },
   ],
 };
@@ -124,27 +124,27 @@ export const footerData = {
   description: 'Building robots, tools, and ideas for a smarter world.',
   linkColumns: [
     {
-      heading: 'Product',
+      heading: 'Globals',
       links: [
-        {label: 'Features', href: '/features'},
-        {label: 'Pricing', href: '/pricing'},
-        {label: 'Docs', href: '/docs'},
+        {label: 'Typography', href: '/components-library#typography'},
+        {label: 'Links', href: '/components-library#links'},
+        {label: 'Color Palette', href: '/components-library#color-palette'},
       ],
     },
     {
-      heading: 'Company',
+      heading: 'More Globals',
       links: [
-        {label: 'About', href: '/about'},
-        {label: 'Careers', href: '/careers'},
-        {label: 'Blog', href: '/blog'},
+        {label: 'Responsive Mixins', href: '/components-library#responsive-mixins'},
+        {label: 'Buttons', href: '/components-library#buttons'},
+        {label: 'Layout', href: '/components-library#layout'},
       ],
     },
     {
-      heading: 'Support',
+      heading: 'Components',
       links: [
-        {label: 'Help Center', href: '/help'},
-        {label: 'Contact', href: '/contact'},
-        {label: 'Status', href: '/status'},
+        {label: 'Media Block', href: '/components-library#media-block'},
+        {label: 'Video Block', href: '/components-library#video-block'},
+        {label: 'Modals', href: '/components-library#modals'},
       ],
     },
   ],
@@ -155,8 +155,8 @@ export const footerData = {
   ],
   copyright: `© ${new Date().getFullYear()} Sommet. All rights reserved.`,
   legalLinks: [
-    {label: 'Privacy Policy', href: '/privacy'},
-    {label: 'Terms of Service', href: '/terms'},
+    {label: 'Privacy Policy', href: '/components-library#privacy-policy'},
+    {label: 'Terms of Service', href: '/components-library#terms-of-service'},
   ],
 };
 
@@ -268,7 +268,7 @@ export default function Home() {
                   <div className="heading--xl"><Counter to={5} start={statsActive} /></div>
                 </div>
               </div>
-              <div className="body mt-12">These counters kick in when this box pops into view. Science!</div>
+              <div className="body mt-12">*I made these numbers up, they don't actually mean anything.</div>
             </div>
           </Waypoint>
         </div>
@@ -296,9 +296,8 @@ export default function Home() {
           <div className="eyebrow">End of the line</div>
           <div className="heading">CTA Callout</div>
           <div className="body mt-2 text-center max-w-700">
-            Well, this is it — the CTA Callout. The only thing left is the footer and, let’s be honest, you can see that already.
-            Like what you see? Feeling commitment-curious? Go peek at the{' '}
-            <a href="/components-library">Components</a>.
+            Well, this is it. The CTA Callout. The only thing left is the footer and, let’s be honest, you can see that already.
+            Do you like what you see or not? Stop wasting your time already. Start shipping.
           </div>
         </div>
 

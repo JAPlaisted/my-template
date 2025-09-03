@@ -34,9 +34,6 @@ export default function CardGrid({
           <button className="button btn btn-primary" onClick={loadMore}>
             Load more
           </button>
-          <div className="body--s mt-2 text-dark/60">
-            Showing {visible} of {cap}
-          </div>
         </div>
       )}
     </section>

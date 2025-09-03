@@ -42,7 +42,7 @@ const featureBlock = {
   body: 'Cards, sliders, media blocks, modals, heroes, FAQ — all with examples in the component library.',
   isReversed: false,
   buttons: [
-    {label: 'View Components', link: '/components-library', theme: 'btn-primary'},
+    {label: 'Fork in GitHub', link: 'https://github.com/JAPlaisted/my-template', theme: 'btn-primary'},
     {label: 'Read Docs', link: '/docs', theme: 'btn-secondary--outline'},
   ],
 };
@@ -149,9 +149,7 @@ export const footerData = {
     },
   ],
   socials: [
-    {icon: '🐦', label: 'Twitter', href: 'https://twitter.com'},
-    {icon: '💼', label: 'LinkedIn', href: 'https://linkedin.com'},
-    {icon: '📸', label: 'Instagram', href: 'https://instagram.com'},
+    {icon: '𝕏', label: 'X', href: 'https://x.com/jonsommet'},
   ],
   copyright: `© ${new Date().getFullYear()} Sommet. All rights reserved.`,
   legalLinks: [

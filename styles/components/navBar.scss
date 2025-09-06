@@ -15,19 +15,19 @@
     display: grid;
     grid-template-columns: auto 1fr auto auto;
     align-items: center;
-    gap: 1rem;
-    padding: .75rem 1rem;
+    gap: pxr(16);
+    padding: pxr(12) pxr(16);
   }
 
   .nav__logo {
-    display: inline-flex; align-items: center; gap: .5rem;
+    display: inline-flex; align-items: center; gap: pxr(8);
     text-decoration: none;
   }
-  .nav__brand { font-weight: 700; font-size: 1rem; color: #0E131F; }
+  .nav__brand { font-weight: 700; font-size: pxr(16); color: #0E131F; }
 
   .nav__links {
     justify-self: center;
-    ul { display: flex; gap: 1.25rem; list-style: none; margin: 0; padding: 0; }
+    ul { display: flex; gap: pxr(20); list-style: none; margin: 0; padding: 0; }
   }
   .nav__link {
     text-decoration: none; color: #0E131F; font-weight: 500;
@@ -38,10 +38,10 @@
 
   .nav__hamburger {
     display: none;
-    background: transparent; border: 0; padding: .5rem; cursor: pointer;
+    background: transparent; border: 0; padding: pxr(8); cursor: pointer;
   }
   .nav__hamburger-bar {
-    display: block; width: 22px; height: 2px; background: #0E131F; margin: 4px 0;
+    display: block; width: pxr(22); height: pxr(2); background: #0E131F; margin: pxr(4) 0;
   }
 
   .nav__panel {
@@ -51,11 +51,11 @@
   }
   .nav__panel.is-open { opacity: 1; pointer-events: auto; }
   .nav__panel-inner {
-    position: absolute; top: 0; right: 0; width: 84vw; max-width: 420px; height: 100%;
-    background: #fff; padding: 1rem 1.25rem; box-shadow: -6px 0 18px rgba(0,0,0,.1);
-    display: flex; flex-direction: column; gap: .75rem;
+    position: absolute; top: 0; right: 0; width: 84vw; max-width: pxr(420); height: 100%;
+    background: #fff; padding: pxr(16) pxr(20); box-shadow: pxr(-6) 0 pxr(18) rgba(0,0,0,.1);
+    display: flex; flex-direction: column; gap: pxr(12);
   }
-  .nav__panel-inner nav ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .5rem; }
+  .nav__panel-inner nav ul { list-style: none; margin: 0; padding: 0; display: grid; gap: pxr(8); }
 }
 
 @media (max-width: 960px) {

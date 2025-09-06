@@ -1,3 +1,5 @@
+@import '../pxr';
+
 .faq {
   .faq__item {
     border-top: 1px solid rgba(0,0,0,.08);
@@ -9,14 +11,14 @@
   .faq__button {
     width: 100%;
     display: flex; align-items: center; justify-content: space-between;
-    gap: 1rem;
-    padding: 1rem 0;
+    gap: pxr(16);
+    padding: pxr(16) 0;
     background: none; border: 0; text-align: left; cursor: pointer;
   }
 
   .faq__chevron {
-    width: 14px; height: 14px; flex: 0 0 14px;
-    border-right: 2px solid currentColor; border-bottom: 2px solid currentColor;
+    width: pxr(14); height: pxr(14); flex: 0 0 pxr(14);
+    border-right: pxr(2) solid currentColor; border-bottom: pxr(2) solid currentColor;
     transform: rotate(-45deg); transition: transform .2s ease;
   }
   .faq__item.is-open .faq__chevron { transform: rotate(45deg); }
@@ -27,7 +29,7 @@
   }
 
   .faq__answer {
-    padding: 0 0 1rem 0;
+    padding: 0 0 pxr(16) 0;
     color: #222;
   }
 }

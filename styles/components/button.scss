@@ -1,4 +1,5 @@
 @import '../variables';
+@import '../pxr';
 @import '../mixins';
 
 /* Base button */
@@ -9,25 +10,25 @@
   border: none;
   cursor: pointer;
   text-align: center;
-  border-radius: 0.375rem;
-  padding: 0.75rem 1.5rem;
+  border-radius: pxr(6);
+  padding: pxr(12) pxr(24);
   transition: background-color 0.3s ease, color 0.3s ease;
   text-decoration: none;
 }
 
 /* Sizes */
 .btn--s {
-  padding: 0.4rem 1rem;
-  font-size: 0.875rem;
+  padding: pxr(6) pxr(16);
+  font-size: pxr(14);
 }
 
 .btn {
-  font-size: 1rem;
+  font-size: pxr(16);
 }
 
 .btn--l {
-  padding: 1rem 2rem;
-  font-size: 1.125rem;
+  padding: pxr(16) pxr(32);
+  font-size: pxr(18);
 }
 
 /* Color Variants */

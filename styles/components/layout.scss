@@ -1,3 +1,5 @@
+@import '../pxr';
+
 .container {
   width: 100%;
   margin: 0 auto;
@@ -5,11 +7,11 @@
   padding-right: 1rem;
 
   @include desktop {
-    max-width: 720px;
+    max-width: pxr(720);
   }
 
   @include desktop {
-    max-width: 960px;
+    max-width: pxr(960);
   }
 }
 
@@ -19,7 +21,7 @@
 }
 
 .col {
-  padding: 1rem;
+  padding: pxr(16);
   width: 100%;
 
   @include desktop {
@@ -28,5 +30,5 @@
 }
 
 .box {
-  padding: 1rem;
+  padding: pxr(16);
 }

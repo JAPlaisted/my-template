@@ -1,13 +1,14 @@
 @import '../variables';
+@import '../pxr';
 @import '../mixins';
 
 .components-library {
   .responsive-box {
     background-color: $honeydew;
-    padding: 1.5rem;
+    padding: #{pxr(24)};
     text-align: center;
-    border: 2px dashed $oxfordBlue;
-    margin-bottom: 2rem;
+    border: pxr(2) dashed $oxfordBlue;
+    margin-bottom: #{pxr(32)};
 
     @include mobile {
       background-color: $white;
@@ -26,8 +27,8 @@
   }
   .color-palette {
     .box {
-      height: 200px;
-      width: 200px;
+      height: #{pxr(200)};
+      width: #{pxr(200)};
       border-radius: 100%;
       display: flex;
       flex-direction: column;

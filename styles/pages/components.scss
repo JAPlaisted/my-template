@@ -4,25 +4,25 @@
 
 .components-library {
   .responsive-box {
-    background-color: $honeydew;
+    background-color: $color-light;
     padding: #{pxr(24)};
     text-align: center;
-    border: pxr(2) dashed $oxfordBlue;
+    border: pxr(2) dashed $color-accent;
     margin-bottom: #{pxr(32)};
 
     @include mobile {
-      background-color: $white;
-      border-color: $tropicalIndigo;
+      background-color: $color-white;
+      border-color: $color-secondary;
     }
 
     @include desktop {
-      background-color: $honeydew;
-      border-color: $oxfordBlue;
+      background-color: $color-light;
+      border-color: $color-accent;
     }
 
     @include desktop-l {
-      background-color: $offWhite;
-      border-color: $coquelicot;
+      background-color: $color-off-white;
+      border-color: $color-primary;
     }
   }
   .color-palette {

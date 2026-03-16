@@ -278,7 +278,7 @@ export default function Home() {
           <h2 className="heading mb-4">FAQ</h2>
           <Waypoint
             threshold={1}
-            onEnter={() => setProgressStep(7)}
+            onEnter={() => setProgressStep(4)}
             activeClass="bg-white transition-colors duration-600"
             inactiveClass="bg-off-white transition-colors duration-600"
           >

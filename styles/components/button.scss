@@ -1,12 +1,12 @@
-@import '../variables';
-@import '../pxr';
-@import '../mixins';
-
-/* Base button */
-.button {
+// ─── Base ─────────────────────────────────────────────────────────────────────
+// .btn is the single required class — structure + default sizing.
+// Usage: <a class="btn btn-primary">Label</a>
+// .button is kept as a transparent alias for any existing markup.
+%btn-base {
   display: inline-block;
   font-family: inherit;
   font-weight: 600;
+  font-size: pxr(16);
   border: none;
   cursor: pointer;
   text-align: center;
@@ -16,14 +16,13 @@
   text-decoration: none;
 }
 
-/* Sizes */
+.btn    { @extend %btn-base; }
+.button { @extend %btn-base; } // alias — prefer .btn in new code
+
+// ─── Sizes ────────────────────────────────────────────────────────────────────
 .btn--s {
   padding: pxr(6) pxr(16);
   font-size: pxr(14);
-}
-
-.btn {
-  font-size: pxr(16);
 }
 
 .btn--l {
@@ -31,45 +30,43 @@
   font-size: pxr(18);
 }
 
-/* Color Variants */
+// ─── Color variants ───────────────────────────────────────────────────────────
 .btn-primary {
-  background-color: $coquelicot;
-  color: $white;
+  background-color: $color-primary;
+  color: $color-white;
 
-  &:hover {
-    background-color: $oxfordBlue;
-  }
+  &:hover { background-color: $color-accent; }
 }
 
 .btn-primary--outline {
   background-color: transparent;
-  color: $richBlack;
-  border: 1px solid $coquelicot;
+  color: $color-text;
+  border: 1px solid $color-primary;
 
   &:hover {
-    background-color: $coquelicot;
-    border: 1px solid $coquelicot;
-    color: $white;
+    background-color: $color-primary;
+    border-color: $color-primary;
+    color: $color-white;
   }
 }
 
 .btn-secondary {
-  background-color: $honeydew;
-  color: $richBlack;
+  background-color: $color-light;
+  color: $color-text;
 
   &:hover {
-    background-color: $tropicalIndigo;
-    color: $white;
+    background-color: $color-secondary;
+    color: $color-white;
   }
 }
 
 .btn-secondary--outline {
   background-color: transparent;
-  color: $richBlack;
-  border: 1px solid $honeydew;
+  color: $color-text;
+  border: 1px solid $color-light;
 
   &:hover {
-    background-color: $honeydew;
-    border: 1px solid $honeydew;
+    background-color: $color-light;
+    border-color: $color-light;
   }
 }

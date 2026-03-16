@@ -1,9 +1,6 @@
-@import '../pxr';
-
 .hero {
-  --dim: .5;     
-  width: 100vw;         
-  margin-left: calc(50% - 50vw); 
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
   position: relative;
   min-height: 100vh;
   overflow: hidden;
@@ -49,12 +46,4 @@
       text-wrap: balance;
     }
   }
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,var(--dim));
-  pointer-events: none;    
 }

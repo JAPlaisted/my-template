@@ -1,10 +1,32 @@
-// Colors
-$offWhite: #FFFFFF;
-$white: #FAF9F6;
-$black: #000000;
+// ─── Color Map ────────────────────────────────────────────────────────────────
+// THE ONLY FILE YOU NEED TO EDIT when changing a site's color palette.
+// Update the hex values below — all components and utilities derive from here.
 
-$coquelicot: #FC440F;
-$tropicalIndigo: #8783D1;
-$richBlack: #0E131F;
-$honeydew: #D6EADF;
-$oxfordBlue: #0C1B33;
+$colors: (
+  'primary':   #FC440F,
+  'secondary': #8783D1,
+  'dark':      #0E131F,
+  'light':     #D6EADF,
+  'accent':    #0C1B33,
+  'white':     #FAF9F6,
+  'off-white': #FFFFFF,
+);
+
+// ─── Semantic tokens ──────────────────────────────────────────────────────────
+// Use these in all component SCSS. Never reference the map keys directly.
+
+$color-primary:    map-get($colors, 'primary');
+$color-secondary:  map-get($colors, 'secondary');
+$color-dark:       map-get($colors, 'dark');
+$color-light:      map-get($colors, 'light');
+$color-accent:     map-get($colors, 'accent');
+$color-white:      map-get($colors, 'white');
+$color-off-white:  map-get($colors, 'off-white');
+
+// ─── Role tokens ──────────────────────────────────────────────────────────────
+// Assign semantic tokens to functional roles.
+// Swap these to retheme the site without touching components.
+
+$color-bg:         $color-off-white;   // page background
+$color-text:       $color-dark;        // default body text
+$color-link:       $color-primary;     // anchor color

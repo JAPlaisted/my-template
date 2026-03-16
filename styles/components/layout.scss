@@ -1,5 +1,4 @@
-@import '../pxr';
-
+// variables, pxr, and mixins are imported globally via globals.scss
 .container {
   width: 100%;
   margin: 0 auto;
@@ -7,11 +6,11 @@
   padding-right: 1rem;
 
   @include desktop {
-    max-width: pxr(720);
+    max-width: pxr(960);
   }
 
-  @include desktop {
-    max-width: pxr(960);
+  @include desktop-l {
+    max-width: pxr(1200);
   }
 }
 
